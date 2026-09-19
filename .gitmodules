@@ -1,0 +1,3 @@
+[submodule "erdb"]
+	path = erdb
+	url = https://github.com/EldenRingDatabase/erdb.git
