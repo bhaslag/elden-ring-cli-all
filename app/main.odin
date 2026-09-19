@@ -75,9 +75,13 @@ main :: proc() {
 }
 
 my_levenshtein :: proc(a,b: string) -> (res: int) {
+  // If either string is empty, the cost is inserting all runes
+  // from the other
   rune_1, rune_2 := utf8.rune_count_in_string(a), utf8.rune_count_in_string(b)
 
-  costs: int
+  costs_a, costs_b, costs_c: int
+  len_a := len(a)
+  len_b := len(b)
 
   if (rune_1 == 0) {
     return rune_2
@@ -90,13 +94,16 @@ my_levenshtein :: proc(a,b: string) -> (res: int) {
   // fmt.println(a[len(a)-1])
   // fmt.println(b[len(b)-1])
   
-  if rune_1 == 0 && rune_2 == 0 {
-    return 0 
+
+  // If last letters are the same, the cost is whatever is 
+  // required to edit the rest of the strings
+  if (a[len_a-1] == b[len_b-1]) {
+    return my_levenshtein(a[0:len_a-1], b[0:len_b-1]) 
   } 
 
-  if (a[len(a)-1] == b[len(b)-1]) {
-    return my_levenshtein(a[0:len(a)-1], b[0:len(b)-1]) 
-  }
+  costs_a = my_levenshtein(a[0:][:len(a) - 1])// substitute
+  costs_b = my_levenshtein()  // delete last letter a
+  costs_c = my_levenshtein()  // delete last letter 
 
-  return costs
+  return min(costs_a, costs_b, costs_c)
 }
