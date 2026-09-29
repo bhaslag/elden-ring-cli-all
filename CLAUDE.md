@@ -93,7 +93,18 @@ but don't overdo it. He needs to learn how think low-level as well.
 0. ✅ Toolchain — `odin` installed (CachyOS repo; pulls clang + llvm21-libs).
 1. Data model — Entity struct + variant `*Data` structs + union.  ← **currently here**
    Full taxonomy spec (language-neutral, evidence-based) in **`docs/data-layout.md`**;
-   **all §8 decisions now locked.** Design done → next is writing the Odin against it.
+   **all §8 decisions now locked.**
+   Progress: ✅ spine (`Entity`), `Section` + `SpoilerTier`, `Ref :: union
+   {EntityHandle, string}` with `EntityHandle :: distinct int`, category enums
+   (partial member lists), `ArmorData` + nested Defense/Resistance stat structs
+   (f32 negations / int resistances — verified against wiki values), `Variant`
+   union on the spine. Search loop runs on hand-built `Entity` literals; `Test`
+   stub retired. Remaining: `CharacterData`, `LocationData`, `WeaponData`,
+   `ItemData` (+ `Tier`), fill out enum members, `relations` cluster.
+   Also done en route (step 3 preview): exact match (`equal_fold`) + "did you
+   mean" suggestions via hand-derived recursive Levenshtein (`my_levenshtein`,
+   oracle-tested against `strings.levenshtein_distance`, threshold < 4,
+   case-folded).
 2. Get data in — (a) build-time Python **extractor**: Fandom API → normalized
    Entity JSON; (b) Odin side: load + parse that bundled dataset into the model.
 3. Matching — resolve a query string to an entity (exact first, fuzzy later).
