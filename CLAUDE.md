@@ -94,19 +94,30 @@ but don't overdo it. He needs to learn how think low-level as well.
 1. Data model — Entity struct + variant `*Data` structs + union.  ← **currently here**
    Full taxonomy spec (language-neutral, evidence-based) in **`docs/data-layout.md`**;
    **all §8 decisions now locked.**
-   Progress: ✅ spine (`Entity`), `Section` + `SpoilerTier`, `Ref :: union
-   {EntityHandle, string}` with `EntityHandle :: distinct int`, category enums
-   (partial member lists), `ArmorData` + nested Defense/Resistance stat structs
-   (f32 negations / int resistances — verified against wiki values), `Variant`
-   union on the spine. Search loop runs on hand-built `Entity` literals; `Test`
-   stub retired. Remaining: `CharacterData`, `LocationData`, `WeaponData`,
-   `ItemData` (+ `Tier`), fill out enum members, `relations` cluster.
+   Progress: ✅ **all five variants declared and in the `Variant` union** —
+   spine (`Entity`), `Section` + `SpoilerTier`, `Ref :: union {EntityHandle,
+   string}` with `EntityHandle :: distinct int`, `ArmorData`, `LocationData`,
+   `WeaponData` (Attack/Guard/Scaling/Requirements; `Grade` + `AttackType`
+   enums carry `None` at position 0 so zero values are honest), `ItemData`
+   (+ `Tier`), `CharacterData` with optional combat/quest facets as
+   `Maybe(Combat)` / `Maybe(Quest)` (§8.2 resolved: facet presence IS
+   boss-ness/NPC-ness; nil `Ref` = loader bug → panic, nil Entity variant =
+   legal lore page). Numeric types verified against wiki values per field
+   (f32 only where data is fractional). Search loop runs on hand-built
+   `Entity` literals; `Test` stub retired.
+   Remaining debt: `relations` stubbed as `[]Ref` (needs the §7 cluster +
+   SpoilerTier), enum member lists partial (fill from real data), scratch
+   experiments still in `main`.
    Also done en route (step 3 preview): exact match (`equal_fold`) + "did you
    mean" suggestions via hand-derived recursive Levenshtein (`my_levenshtein`,
    oracle-tested against `strings.levenshtein_distance`, threshold < 4,
    case-folded).
-2. Get data in — (a) build-time Python **extractor**: Fandom API → normalized
-   Entity JSON; (b) Odin side: load + parse that bundled dataset into the model.
+2. Get data in — (a) ✅ build-time Python **extractor** (`tools/extract.py`, see
+   `tools/README.md`): Fandom API → `data/entities.json` (3,380 entities: 1388
+   Item / 680 Armor / 484 Weapon / 385 Location / 377 Character / 66 nil-lore;
+   raw-page cache in `tools/cache/` makes `--normalize-only` re-runs offline);
+   (b) Odin side: load + parse that bundled dataset into the model — `#load`,
+   `core:encoding/json`, then the §7a two-pass id→handle resolve. ← **next**
 3. Matching — resolve a query string to an entity (exact first, fuzzy later).
 4. Rendering — print a formatted card, spoiler-gated, ANSI color by type.
 5. CLI plumbing — args, flags, exit codes.

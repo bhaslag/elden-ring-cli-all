@@ -139,14 +139,84 @@ ArmorData :: struct {
 	passive_effects: []string,
 }
 
+ItemData :: struct {
+	category:              ItemCategory,
+	effect:                string,
+	fp_cost:               int,
+	slots_used:            int,
+	spell_reqs:            Requirements,
+	weight:                f32,
+	required_items:        []Ref,
+	buy_price, sell_price: int,
+	tiers:                 []Tier,
+}
+
+Tier :: struct {
+	label, detail: string,
+}
+
+Resistances :: struct {
+	res_standard,
+	res_slash,
+	res_strike,
+	res_pierce,
+	res_magic,
+	res_fire,
+	res_lightning,
+	res_holy,
+	res_poison,
+	res_rot,
+	res_frost,
+	res_bleed,
+	res_sleep,
+	res_madness,
+	res_death: f32,
+}
+
+Combat :: struct {
+	hp:          int,
+	poise:       int,
+	resistances: Resistances,
+	weaknesses:  []string,
+	phases:      int,
+	moveset:     []string,
+	drops:       []Ref,
+	runes:       int,
+	stats:       struct {
+		str, dex, int_stat, fai, arc, vig, mnd, end: int,
+		class:                                       string,
+	},
+}
+
+Quest :: struct {
+	questline: []string,
+	shop:      []Ref,
+}
+
+CharacterData :: struct {
+	title:                             string,
+	aka:                               []string,
+	role:                              string,
+	race, affiliation, classification: string,
+	voice:                             string,
+	relations:                         []Ref,
+	combat_facet:                      Maybe(Combat),
+	quest_facet:                       Maybe(Quest),
+}
+
 Variant :: union {
 	ArmorData,
 	LocationData,
 	WeaponData,
+	ItemData,
+	CharacterData,
 }
 
 main :: proc() {
 	args := os.args
+
+	eldr_file := #load("../data/entities.json")
+	fmt.println(len(eldr_file))
 
 	gmdsword_section := []Section {
 		Section {
