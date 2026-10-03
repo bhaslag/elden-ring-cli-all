@@ -29,6 +29,13 @@ WeaponClass :: enum {
 	Greatsword,
 }
 
+AttackType :: enum {
+	None,
+	Standard,
+	Slash,
+	Pierce,
+}
+
 ArmorSlot :: enum {
 	Head,
 	Body,
@@ -41,6 +48,31 @@ ItemCategory :: enum {
 	Talisman,
 	Key_Item,
 	Bolstering_Material,
+}
+
+LocationData :: struct {
+	region:            Ref,
+	sub_regions:       []Ref,
+	graces:            []string,
+	is_legacy_dungeon: bool,
+	is_optional:       bool,
+	map_fragment:      string,
+	bosses:            []Ref,
+	npcs:              []Ref,
+	notable_loot:      []Ref,
+}
+
+WeaponData :: struct {
+	class:           WeaponClass,
+	attack_type:     AttackType,
+	weight:          f32,
+	attack:          Attack,
+	guard:           Guard,
+	scaling:         Scaling,
+	requirements:    Requirements,
+	skill:           string,
+	crit:            int,
+	passive_effects: []string,
 }
 
 Section :: struct {
@@ -57,6 +89,37 @@ Entity :: struct {
 	sections:    []Section,
 	found_at:    []Ref,
 	variant:     Variant,
+}
+
+Attack :: struct {
+	physical, magic, fire, lightning, holy: f32,
+}
+
+Guard :: struct {
+	physical_guarded,
+	magic_guarded,
+	fire_guarded,
+	lightning_guarded,
+	holy_guarded,
+	guard_boost: f32,
+}
+
+Scaling :: struct {
+	str, dex, int_scale, fai, arc: Grade,
+}
+
+Grade :: enum {
+	None,
+	S,
+	A,
+	B,
+	C,
+	D,
+	E,
+}
+
+Requirements :: struct {
+	str, dex, int_req, fai, arc: int,
 }
 
 DefenseType :: struct {
@@ -78,6 +141,8 @@ ArmorData :: struct {
 
 Variant :: union {
 	ArmorData,
+	LocationData,
+	WeaponData,
 }
 
 main :: proc() {
