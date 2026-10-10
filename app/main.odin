@@ -1,5 +1,6 @@
 package main
 
+import "core:encoding/json"
 import "core:fmt"
 import "core:os"
 import "core:strings"
@@ -216,101 +217,31 @@ main :: proc() {
 	args := os.args
 
 	eldr_file := #load("../data/entities.json")
-	fmt.println(len(eldr_file))
+	// fmt.println(len(eldr_file))
 
-	gmdsword_section := []Section {
-		Section {
-			"Items",
-			SpoilerTier.LateGame,
-			"This is the body of the great moon darksword section",
-		},
-	}
-	test1 := Entity {
-		id          = "98",
-		name        = "Darkmoon Greatsword",
-		description = "A big sword, it's cold",
-		sections    = gmdsword_section,
+	json_data, err := json.parse(eldr_file)
+	if err != .None {
+		fmt.eprintln("Failed to parse the json file.")
+		fmt.eprintln("Error:", err)
 	}
 
-	ranni_section := []Section {
-		Section{"Characters", SpoilerTier.Lore, "This is the body of the ranni section"},
-	}
-	test2 := Entity {
-		id          = "654",
-		name        = "Ranni",
-		description = "Ranni, she's got 4 arms",
-		sections    = ranni_section,
-	}
+	defer json.destroy_value(json_data)
 
-	leyndel_section := []Section {
-		Section{"Places", SpoilerTier.Basic, "This is the body section of Leyndel"},
-	}
-	test3 := Entity {
-		id          = "6",
-		name        = "Leyndel",
-		description = "This is the description of Leyndel",
-		sections    = leyndel_section,
-	}
+	root := json_data
 
-	grace_section := []Section {
-		Section{"Places", SpoilerTier.Lore, "This is the body of the section for graces"},
-	}
-	test4 := Entity {
-		id          = "10",
-		name        = "Sites of grace",
-		description = "This is a description of sites of grace",
-		sections    = grace_section,
-	}
+	fmt.println(root)
 
-	malenia_section := []Section {
-		Section{"Bosses", SpoilerTier.Basic, "This is the body of the section"},
-	}
-
-	test5 := Entity {
-		id          = "40",
-		name        = "Malenia",
-		description = "This is the description",
-		sections    = malenia_section,
-	}
-
-	test_u: Ref = "Hellope"
-	switch t in test_u {
-	case string:
-		#assert(type_of(t) == string)
-		fmt.println("I am a string")
-	case EntityHandle:
-		#assert(type_of(t) == EntityHandle)
-		fmt.println("EntityHandle!")
-	case:
-		panic("No type for this in union")
-	}
-
-	test_b := SpoilerTier.LateGame
-	switch test_b {
-	case .Basic:
-		fmt.println("Basic!")
-	case .Lore:
-		fmt.println("Lore!")
-	case .LateGame:
-		fmt.println("Late game!")
-	}
-
-	if test_b <= .Lore {
-		fmt.println("I am not late game")
-	}
-
-	results := [5]Entity{test1, test2, test3, test4, test5}
 	if len(args) > 1 {
 		query := strings.join(args[1:], " ")
 		defer delete(query)
 
 		answer := ""
 
-		for result in results {
-			if strings.equal_fold(query, result.name) {
-				answer = result.description
-			}
-		}
+		// for result in results {
+		// 	if strings.equal_fold(query, result.name) {
+		// 		answer = result.description
+		// 	}
+		// }
 
 		if answer == "" {
 			recommendations: [dynamic]string
@@ -321,16 +252,16 @@ main :: proc() {
 			lower_query := strings.to_lower(query)
 			defer delete(lower_query)
 
-			for result in results {
-				lower_result_name := strings.to_lower(result.name)
-				defer delete(lower_result_name)
-
-				my_lev_dist := my_levenshtein(lower_result_name, lower_query)
-
-				if my_lev_dist < 4 {
-					append(&recommendations, result.name)
-				}
-			}
+			// for result in results {
+			// 	lower_result_name := strings.to_lower(result.name)
+			// 	defer delete(lower_result_name)
+			//
+			// 	my_lev_dist := my_levenshtein(lower_result_name, lower_query)
+			//
+			// 	if my_lev_dist < 4 {
+			// 		append(&recommendations, result.name)
+			// 	}
+			// }
 
 			if len(recommendations) > 0 {
 				strings.write_string(&str_build, "No results. Did you mean:")
