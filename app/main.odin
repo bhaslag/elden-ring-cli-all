@@ -229,7 +229,27 @@ main :: proc() {
 
 	root := json_data
 
-	fmt.println(root)
+	json_array, array_ok := root.(json.Array)
+
+	if !array_ok {
+		fmt.println("JSON is not an array. Assuming bad data.")
+		os.exit(1)
+	}
+
+	entities := [dynamic]Entity
+
+	for obj in json_array {
+		obj, obj_ok := json_array[0].(json.Object)
+
+		if !obj_ok {
+			fmt.println("JSON element is not an object. Assuming bad data.")
+			os.exit(1)
+		}
+
+		eldr_entity := Entity{obj["id"], obj["name"], obj["image"]}
+
+	}
+
 
 	if len(args) > 1 {
 		query := strings.join(args[1:], " ")
