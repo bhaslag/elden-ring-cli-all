@@ -236,7 +236,8 @@ main :: proc() {
 		os.exit(1)
 	}
 
-	entities := [dynamic]Entity
+	entities: [dynamic]Entity
+	defer delete(entities)
 
 	for obj in json_array {
 		obj, obj_ok := json_array[0].(json.Object)
@@ -246,8 +247,41 @@ main :: proc() {
 			os.exit(1)
 		}
 
-		eldr_entity := Entity{obj["id"], obj["name"], obj["image"]}
+		sections_ok := "sections" in obj
+		if sections_ok {
+			obj_sections, sections_is_json_obj_ok := obj["sections"].(json.Array)
+			if !sections_is_json_obj_ok {
+				fmt.println("Sections is not an object. Assuming bad data.")
+				os.exit(1)
+			}
 
+			sections: [dynamic]Section
+			defer delete(sections)
+
+			for obj_section in obj_sections {
+				// fmt.println(obj_section)
+				obj_section, obj_section_ok := obj_sections[0].(json.Object)
+				fmt.println(obj_section["tier"])
+				if !obj_section_ok {
+					fmt.println("Section value is not a JSON object. Assuming bad data")
+					os.exit(1)
+				}
+
+				tier: SpoilerTier
+				section := Section {
+					obj_section["heading"].(string),
+					obj_section["tier"].(SpoilerTier),
+					obj_section["body"].(string),
+				}
+
+				append(&sections, section)
+			}
+
+		}
+
+		// eldr_entity := Entity{obj["id"], obj["name"], obj["image"], obj["description"]}
+
+		// append(&entities, eldr_entity)
 	}
 
 
