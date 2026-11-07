@@ -247,14 +247,22 @@ def strip_tables(s: str) -> str:
         s = re.sub(r"\{\|(?:[^{}]|\{\{[^{}]*\}\})*?\|\}", "", s, flags=re.S)
     return s
 
+# Interlanguage links ([[ru:Древо Эрд]], [[it:Albero Madre]]) point at the same
+# article on another-language wiki; MediaWiki never renders them as text, so
+# they are neither prose nor refs. (Interwiki links like [[wp:...]] are kept.)
+LANG_CODES = "ar|de|es|fr|it|ja|ko|pl|pt|pt-br|ru|tr|uk|vi|zh|zh-tw"
+LANG_PREFIX_RE = re.compile(rf"\s*(?:{LANG_CODES})\s*:", re.I)
+LANG_LINK_RE = re.compile(rf"\[\[\s*(?:{LANG_CODES})\s*:[^\]]*\]\]", re.I)
+
 def clean_text(s: str) -> str:
     s = re.sub(r"<!--.*?-->", "", s, flags=re.S)
     s = re.sub(r"<ref[^>]*/>", "", s, flags=re.S)
     s = re.sub(r"<ref[^>]*>.*?</ref>", "", s, flags=re.S)
     s = strip_templates(s)
     s = strip_tables(s)
-    # links: drop File/Image/Category; [[a|b]]->b ; [[a]]->a
+    # links: drop File/Image/Category + interlanguage; [[a|b]]->b ; [[a]]->a
     s = re.sub(r"\[\[(?:File|Image|Category):[^\]]*\]\]", "", s, flags=re.I)
+    s = LANG_LINK_RE.sub("", s)
     s = re.sub(r"\[\[[^\]|]*\|([^\]]*)\]\]", r"\1", s)
     s = re.sub(r"\[\[([^\]]*)\]\]", r"\1", s)
     s = re.sub(r"\[https?://\S+\s+([^\]]*)\]", r"\1", s)
@@ -277,7 +285,7 @@ def parse_links(s: str) -> list[tuple[str, str]]:
     out = []
     for m in re.finditer(r"\[\[([^\]|]+)(?:\|([^\]]*))?\]\]", s):
         target = m.group(1).strip()
-        if re.match(r"(File|Image|Category):", target, re.I):
+        if re.match(r"(File|Image|Category):", target, re.I) or LANG_PREFIX_RE.match(target):
             continue
         out.append((target, (m.group(2) or target).strip()))
     return out

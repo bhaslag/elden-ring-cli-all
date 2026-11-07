@@ -240,12 +240,15 @@ main :: proc() {
 	defer delete(entities)
 
 	for obj in json_array {
-		obj, obj_ok := json_array[0].(json.Object)
+		obj, obj_ok := obj.(json.Object)
 
 		if !obj_ok {
 			fmt.println("JSON element is not an object. Assuming bad data.")
 			os.exit(1)
 		}
+
+		sections: [dynamic]Section
+		defer delete(sections)
 
 		sections_ok := "sections" in obj
 		if sections_ok {
@@ -255,22 +258,30 @@ main :: proc() {
 				os.exit(1)
 			}
 
-			sections: [dynamic]Section
-			defer delete(sections)
 
 			for obj_section in obj_sections {
 				// fmt.println(obj_section)
-				obj_section, obj_section_ok := obj_sections[0].(json.Object)
-				fmt.println(obj_section["tier"])
+				obj_section, obj_section_ok := obj_section.(json.Object)
 				if !obj_section_ok {
 					fmt.println("Section value is not a JSON object. Assuming bad data")
 					os.exit(1)
 				}
 
-				tier: SpoilerTier
+
+				what_tier: SpoilerTier
+				// defer delete(what_tier)
+				switch tier_string := obj_section["tier"].(string); tier_string {
+				case "Lore":
+					what_tier = SpoilerTier.Lore
+				case "Basic":
+					what_tier = SpoilerTier.Basic
+				case "LateGame":
+					what_tier = SpoilerTier.LateGame
+				}
+				// tier: SpoilerTier
 				section := Section {
 					obj_section["heading"].(string),
-					obj_section["tier"].(SpoilerTier),
+					what_tier,
 					obj_section["body"].(string),
 				}
 
@@ -279,7 +290,66 @@ main :: proc() {
 
 		}
 
-		// eldr_entity := Entity{obj["id"], obj["name"], obj["image"], obj["description"]}
+		// fmt.println(obj)
+		found_at: [dynamic]Ref
+		found_at_ok := "found_at" in obj
+		if found_at_ok {
+			obj_found_at_values, found_at_is_json_obj_ok := obj["found_at"].(json.Array)
+			if !found_at_is_json_obj_ok {
+				fmt.println("found_at is not an object. Assuming bad data.")
+				os.exit(1)
+			}
+
+			for found_at_value in obj_found_at_values {
+				// fmt.println(found_at_value)
+				found_at_value, found_at_value_ok := found_at_value.(json.String)
+				if !found_at_value_ok {
+					fmt.println("found_at value is not a string. Assuming bad data")
+					os.exit(1)
+				}
+
+				found_where: Ref
+				found_where = found_at_value
+				append(&found_at, found_where)
+				// fmt.println(found_at_value)
+
+			}
+		}
+
+		variant: Variant
+		variant_ok := "found_at" in obj
+		if variant_ok {
+			obj_found_at_values, found_at_is_json_obj_ok := obj["found_at"].(json.Array)
+			if !found_at_is_json_obj_ok {
+				fmt.println("found_at is not an object. Assuming bad data.")
+				os.exit(1)
+			}
+
+			for found_at_value in obj_found_at_values {
+				// fmt.println(found_at_value)
+				found_at_value, found_at_value_ok := found_at_value.(json.String)
+				if !found_at_value_ok {
+					fmt.println("found_at value is not a string. Assuming bad data")
+					os.exit(1)
+				}
+
+				found_where: Ref
+				found_where = found_at_value
+				append(&found_at, found_where)
+				// fmt.println(found_at_value)
+
+			}
+		}
+		// fmt.println(entities)
+		// eldr_entity := Entity {
+		// obj["id"].(string),
+		// obj["name"].(string),
+		// obj["image"].(string),
+		// obj["description"].(string),
+		// sections[:],
+		// found_at[:],
+		// variant,
+		// }
 
 		// append(&entities, eldr_entity)
 	}
