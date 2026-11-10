@@ -39,9 +39,6 @@
     "variant": {
       "kind": "Location",
       "region": "gravesite-plain",
-      "graces": [
-        "Greatbridge, North"
-      ],
       "notable_loot": [
         "Gravebird Armor",
         "great-katana",
@@ -123,10 +120,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "abyssal-woods",
-      "graces": [
-        "1"
-      ]
+      "region": "abyssal-woods"
     }
   },
   {
@@ -137,6 +131,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Abandoned Coffin"
+      ],
       "bosses": [
         "ancient-dragon-lansseax"
       ]
@@ -298,9 +295,6 @@
     "variant": {
       "kind": "Location",
       "region": "realm-of-shadow",
-      "graces": [
-        "5"
-      ],
       "is_legacy_dungeon": true,
       "map_fragment": "Map: Abyss",
       "notable_loot": [
@@ -350,6 +344,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Academy Crystal Cave"
+      ],
       "bosses": [
         "crystalian"
       ],
@@ -402,6 +399,11 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Academy Gate Town",
+        "Gate Town North",
+        "South Raya Lucaria Gate"
+      ],
       "bosses": [
         "death-rite-bird"
       ],
@@ -621,7 +623,10 @@
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
       "graces": [
-        "4"
+        "Church of the Cuckoo",
+        "Schoolhouse Classroom",
+        "Debate Parlor",
+        "Raya Lucaria Grand Library"
       ],
       "is_optional": true,
       "bosses": [
@@ -946,7 +951,8 @@
       "kind": "Location",
       "region": "limgrave",
       "graces": [
-        "2"
+        "Agheel Lake North",
+        "Agheel Lake South"
       ]
     }
   },
@@ -1028,6 +1034,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Ailing Village Outskirts"
+      ],
       "notable_loot": [
         "flame-crest-wooden-shield"
       ]
@@ -1094,6 +1103,18 @@
       "sub_regions": [
         "ainsel-river-main",
         "lake-of-rot"
+      ],
+      "graces": [
+        "Ainsel River Well Depths",
+        "Ainsel River Sluice Gate",
+        "Ainsel River Downstream",
+        "Dragonkin Soldier of Nokstella",
+        "Astel, Naturalborn of the Void",
+        "Ainsel River Main",
+        "Nokstella, Eternal City",
+        "Nokstella Waterfall Basin",
+        "Lake of Rot Shoreside",
+        "Grand Cloister"
       ]
     }
   },
@@ -1111,7 +1132,12 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "ainsel-river"
+      "region": "ainsel-river",
+      "graces": [
+        "Ainsel River Main",
+        "Nokstella, Eternal City",
+        "Nokstella Waterfall Basin"
+      ]
     }
   },
   {
@@ -2297,6 +2323,49 @@
         "capital-outskirts",
         "mt-gelmir"
       ],
+      "graces": [
+        "Abandoned Coffin",
+        "Erdtree-Gazing Hill",
+        "Altus Plateau",
+        "Altus Highway Junction",
+        "Forest-Spanning Greatbridge",
+        "Bower of Bounty",
+        "Windmill Village",
+        "Windmill Heights",
+        "Road of Iniquity Side Path",
+        "Rampartside Path",
+        "Shaded Castle Ramparts",
+        "Shaded Castle Inner Gate",
+        "Castellan's Hall",
+        "Unsightly Catacombs",
+        "Sainted Hero's Grave",
+        "Sage's Cave",
+        "Perfumer's Grotto",
+        "Old Altus Tunnel",
+        "Altus Tunnel",
+        "Bridge of Iniquity",
+        "First Mt Gelmir Campsite",
+        "Ninth Mt Gelmir Campsite",
+        "Road of Iniquity",
+        "Seethewater River",
+        "Seethewater Terminus",
+        "Craftsman's Shack",
+        "Primeval Sorcerer Azur",
+        "Wyndham Catacombs",
+        "Gelmir Hero's Grave",
+        "Seethewater Cave",
+        "Volcano Cave",
+        "Outer Wall Phantom Tree",
+        "Minor Erdtree Church",
+        "Outer Wall Battleground",
+        "Hermit Merchant's Shack",
+        "Capital Rampart",
+        "Auriza Side Tomb",
+        "Auriza Hero's Grave",
+        "Sealed Tunnel",
+        "Divine Tower of West Altus- Gate",
+        "Divine Tower of West Altus"
+      ],
       "is_legacy_dungeon": true
     }
   },
@@ -2335,6 +2404,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Altus Tunnel"
+      ],
       "bosses": [
         "crystalian"
       ],
@@ -2670,7 +2742,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "nokron-eternal-city"
+      "region": "nokron-eternal-city",
+      "graces": [
+        "Ancestral Woods"
+      ]
     }
   },
   {
@@ -3548,9 +3623,6 @@
     "variant": {
       "kind": "Location",
       "region": "land-of-the-tower",
-      "graces": [
-        "6"
-      ],
       "map_fragment": "rauh ruins",
       "bosses": [
         "divine-beast-dancing-lion",
@@ -4091,6 +4163,9 @@
     "variant": {
       "kind": "Location",
       "region": "consecrated-snowfield",
+      "graces": [
+        "Apostate Derelict"
+      ],
       "npcs": [
         "phillia-towering-little-sister"
       ],
@@ -4980,6 +5055,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Artist's Shack"
+      ],
       "notable_loot": [
         "\"Homing Instinct\" Painting",
         "smithing-stone-1"
@@ -5011,6 +5089,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Artist's Shack (Liurnia)"
+      ],
       "notable_loot": [
         "\"Resurrection\" Painting",
         "smithing-stone-4"
@@ -9229,7 +9310,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "ainsel-river"
+      "region": "ainsel-river",
+      "graces": [
+        "Astel, Naturalborn of the Void"
+      ]
     }
   },
   {
@@ -9656,6 +9740,9 @@
     "variant": {
       "kind": "Location",
       "region": "capital-outskirts",
+      "graces": [
+        "Auriza Hero's Grave"
+      ],
       "bosses": [
         "crucible-knight-ordovis"
       ],
@@ -9714,6 +9801,9 @@
     "variant": {
       "kind": "Location",
       "region": "capital-outskirts",
+      "graces": [
+        "Auriza Side Tomb"
+      ],
       "bosses": [
         "grave-warden-duelist"
       ],
@@ -12812,6 +12902,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Bellum Church"
+      ],
       "npcs": [
         "lightseeker-hyetta",
         "nomadic-merchant-northern-liurnia"
@@ -12856,6 +12949,13 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "East Raya Lucaria Gate",
+        "Bellum Church",
+        "Grand Lift of Dectus",
+        "Frenzied Flame Village Outskirts",
+        "Church of Inhibition"
+      ],
       "npcs": [
         "lightseeker-hyetta",
         "nomadic-merchant-northern-liurnia"
@@ -14087,6 +14187,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Black Knife Catacombs"
+      ],
       "bosses": [
         "black-knife-assassin",
         "cemetery-shade"
@@ -18472,6 +18575,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Boilprawn Shack"
+      ],
       "npcs": [
         "blackguard-big-boggart"
       ]
@@ -20462,6 +20568,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Bridge of Sacrifice"
+      ],
       "npcs": [
         "irina-of-morne",
         "castellan-edgar"
@@ -21258,7 +21367,18 @@
         "swamp-of-aeonia"
       ],
       "graces": [
-        "25"
+        "Smoldering Wall",
+        "Caelid Highway South",
+        "Southern Aeonia Swamp Bank",
+        "Impassable Greatbridge",
+        "Redmane Castle Plaza",
+        "Aeonia Swamp Shore",
+        "Astray from Caelid Highway North",
+        "Heart of Aeonia",
+        "Inner Aeonia",
+        "Dragonbarrow West",
+        "Dragonbarrow Fork",
+        "Farum Greatbridge"
       ],
       "npcs": [
         "nomadic-merchant-caelid-highway-north",
@@ -21747,15 +21867,15 @@
       "region": "altus-plateau",
       "graces": [
         "Outer Wall Phantom Tree",
-        "minor-erdtree-church",
-        "capital-outskirts",
-        "hermit-merchant-s-shack",
+        "Minor Erdtree Church",
+        "Outer Wall Battleground",
+        "Hermit Merchant's Shack",
         "Capital Rampart",
-        "auriza-side-tomb",
-        "auriza-hero-s-grave",
-        "sealed-tunnel",
-        "Divine Tower of West Altus: Gate",
-        "divine-tower-of-west-altus"
+        "Auriza Side Tomb",
+        "Auriza Hero's Grave",
+        "Sealed Tunnel",
+        "Divine Tower of West Altus- Gate",
+        "Divine Tower of West Altus"
       ],
       "npcs": [
         "draconic-tree-sentinel",
@@ -21803,6 +21923,12 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Main Caria Manor Gate",
+        "Manor Lower Level",
+        "Manor Upper Level",
+        "Royal Moongazing Grounds"
+      ],
       "bosses": [
         "loretta"
       ],
@@ -22722,6 +22848,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Study Hall Entrance"
+      ],
       "notable_loot": [
         "carian-glintstone-staff",
         "cerulean-seed-talisman",
@@ -23032,7 +23161,10 @@
       "kind": "Location",
       "region": "weeping-peninsula",
       "graces": [
-        "4"
+        "Castle Morne Lift",
+        "Behind the Castle",
+        "Beside the Rampart Gaol",
+        "Morne Moangrave"
       ],
       "bosses": [
         "leonine-misbegotten"
@@ -23086,11 +23218,8 @@
       "region": "mountaintops-of-the-giants",
       "graces": [
         "Castle Sol Main Gate",
-        "elder-lion",
-        "church-of-the-eclipse",
-        "castle-sol",
-        "sites-of-grace",
-        "stranded-souls"
+        "Church of the Eclipse",
+        "Castle Sol Rooftop"
       ],
       "bosses": [
         "commander-niall"
@@ -23311,12 +23440,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "liurnia-of-the-lakes",
-      "graces": [
-        "Cathedral of Manus Celes",
-        "sites-of-grace",
-        "starlight-shards"
-      ]
+      "region": "liurnia-of-the-lakes"
     }
   },
   {
@@ -23356,11 +23480,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "scadu-altus",
-      "graces": [
-        "Cathedral of Manus Metyr",
-        "sites-of-grace"
-      ]
+      "region": "scadu-altus"
     }
   },
   {
@@ -23388,6 +23508,9 @@
     "variant": {
       "kind": "Location",
       "region": "subterranean-shunning-grounds",
+      "graces": [
+        "Cathedral of the Forsaken"
+      ],
       "bosses": [
         "mohg-lord-of-blood"
       ]
@@ -23450,7 +23573,7 @@
       "kind": "Location",
       "region": "limgrave",
       "graces": [
-        "sites-of-grace"
+        "Cave of Knowledge"
       ],
       "bosses": [
         "soldier-of-godrick"
@@ -23493,7 +23616,7 @@
       "kind": "Location",
       "region": "consecrated-snowfield",
       "graces": [
-        "dragon"
+        "Cave of the Forlorn"
       ],
       "bosses": [
         "misbegotten-crusader"
@@ -24920,12 +25043,6 @@
     "variant": {
       "kind": "Location",
       "region": "realm-of-shadow",
-      "graces": [
-        "charo-s-hidden-grave",
-        "lamenter-s-gaol",
-        "charo-s-hidden-grave",
-        "lamenter-s-gaol"
-      ],
       "bosses": [
         "death-rite-bird",
         "lamenter",
@@ -24975,10 +25092,6 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
-      "graces": [
-        "moonlight-altar",
-        "ranni-the-witch"
-      ],
       "notable_loot": [
         "ranni-s-dark-moon"
       ]
@@ -25291,6 +25404,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Church of Dragon Communion"
+      ],
       "notable_loot": [
         "exalted-flesh",
         "smithing-stone-2"
@@ -25327,6 +25443,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Church of Elleh"
+      ],
       "npcs": [
         "merchant-kale",
         "ranni-the-witch"
@@ -25436,6 +25555,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Church of Pilgrimage"
+      ],
       "notable_loot": [
         "sacred-tear",
         "gilded-iron-shield",
@@ -25473,6 +25595,9 @@
     "variant": {
       "kind": "Location",
       "region": "flame-peak",
+      "graces": [
+        "Church of Repose"
+      ],
       "notable_loot": [
         "sacred-tear",
         "rivers-of-blood",
@@ -25556,7 +25681,10 @@
       "academy-of-raya-lucaria"
     ],
     "variant": {
-      "kind": "Location"
+      "kind": "Location",
+      "graces": [
+        "Church of the Cuckoo"
+      ]
     }
   },
   {
@@ -25591,7 +25719,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "mountaintops-of-the-giants"
+      "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Church of the Eclipse"
+      ]
     }
   },
   {
@@ -25674,7 +25805,7 @@
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
       "graces": [
-        "sites-of-grace"
+        "Cathedral of Vows"
       ],
       "notable_loot": [
         "gold-sewing-needle",
@@ -26820,6 +26951,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Cliffbottom Catacombs"
+      ],
       "bosses": [
         "erdtree-burial-watchdog"
       ],
@@ -27060,6 +27194,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Coastal Cave"
+      ],
       "bosses": [
         "demi-human-chief"
       ],
@@ -27100,6 +27237,9 @@
     "variant": {
       "kind": "Location",
       "region": "mohgwyn-palace",
+      "graces": [
+        "Cocoon of the Empyrean"
+      ],
       "npcs": [
         "miquella-of-the-haligtree",
         "mohg-lord-of-blood",
@@ -28573,7 +28713,16 @@
     "description": "The Consecrated Snowfield is a subregion located on the Mountaintops of the Giants.",
     "variant": {
       "kind": "Location",
-      "region": "mountaintops-of-the-giants"
+      "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Consecrated Snowfield",
+        "Inner Consecrated Snowfield",
+        "Ordina Liturgical Town Day",
+        "Apostate Derelict",
+        "Consecrated Snowfield Catacombs",
+        "Cave of the Forlorn",
+        "Yelough Anix Tunnel"
+      ]
     }
   },
   {
@@ -28611,6 +28760,9 @@
     "variant": {
       "kind": "Location",
       "region": "consecrated-snowfield",
+      "graces": [
+        "Consecrated Snowfield Catacombs"
+      ],
       "bosses": [
         "grave-warden-duelist"
       ],
@@ -29195,6 +29347,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Craftsman's Shack"
+      ],
       "notable_loot": [
         "pulley-crossbow"
       ]
@@ -31050,8 +31205,6 @@
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
       "graces": [
-        "crumbling-farum-azula",
-        "sites-of-grace",
         "Crumbling Beast Grave",
         "Crumbling Beast Grave Depths",
         "Tempest-Facing Balcony",
@@ -31061,8 +31214,8 @@
         "Dragon Temple Lift",
         "Dragon Temple Rooftop",
         "Beside the Great Bridge",
-        "dragonlord-placidusax-grace",
-        "maliketh-the-black-blade-grace"
+        "Dragonlord Placidusax",
+        "Maliketh, the Black Blade"
       ],
       "bosses": [
         "godskin-duo",
@@ -33570,10 +33723,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "scadu-altus",
-      "graces": [
-        "2"
-      ]
+      "region": "scadu-altus"
     }
   },
   {
@@ -34719,6 +34869,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Deathtouched Catacombs"
+      ],
       "bosses": [
         "black-knife-assassin"
       ],
@@ -35020,7 +35173,12 @@
     "variant": {
       "kind": "Location",
       "graces": [
-        "6"
+        "Root-Facing Cliffs",
+        "Great Waterfall Crest",
+        "Deeproot Depths",
+        "The Nameless Eternal City",
+        "Across the Roots",
+        "Prince of Death's Throne"
       ],
       "npcs": [
         "d-beholder-of-death",
@@ -36969,6 +37127,10 @@
     "variant": {
       "kind": "Location",
       "region": "leyndell-royal-capital",
+      "graces": [
+        "Divine Tower of East Altus Gate",
+        "Divine Tower of East Altus"
+      ],
       "bosses": [
         "fell-twins"
       ]
@@ -36994,6 +37156,10 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Limgrave Tower Bridge",
+        "Divine Tower of Limgrave"
+      ],
       "notable_loot": [
         "ash-of-war-scarab",
         "boltdrake-talisman",
@@ -37027,10 +37193,6 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
-      "graces": [
-        "carian-study-hall",
-        "ranni-the-witch"
-      ],
       "notable_loot": [
         "cursemark-of-death",
         "stargazer-heirloom"
@@ -37051,7 +37213,11 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "capital-outskirts"
+      "region": "capital-outskirts",
+      "graces": [
+        "Divine Tower of West Altus- Gate",
+        "Divine Tower of West Altus"
+      ]
     }
   },
   {
@@ -37067,7 +37233,12 @@
       }
     ],
     "variant": {
-      "kind": "Location"
+      "kind": "Location",
+      "graces": [
+        "Divine Tower of East Altus",
+        "Divine Tower of Limgrave",
+        "Divine Tower of West Altus- Gate"
+      ]
     }
   },
   {
@@ -37151,7 +37322,8 @@
       "kind": "Location",
       "region": "altus-plateau",
       "graces": [
-        "2"
+        "Windmill Village",
+        "Windmill Heights"
       ],
       "bosses": [
         "godskin-apostle"
@@ -37917,9 +38089,6 @@
     "variant": {
       "kind": "Location",
       "region": "gravesite-plain",
-      "graces": [
-        "2"
-      ],
       "bosses": [
         "ancient-dragon-man"
       ],
@@ -38704,7 +38873,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "crumbling-farum-azula"
+      "region": "crumbling-farum-azula",
+      "graces": [
+        "Dragonlord Placidusax"
+      ]
     }
   },
   {
@@ -40352,6 +40524,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Earthbore Cave"
+      ],
       "bosses": [
         "runebear"
       ],
@@ -41521,6 +41696,10 @@
     "variant": {
       "kind": "Location",
       "region": "leyndell-royal-capital",
+      "graces": [
+        "Elden Throne",
+        "Ashen Capital Elden Throne"
+      ],
       "bosses": [
         "morgott-the-omen-king"
       ],
@@ -42023,12 +42202,11 @@
       "kind": "Location",
       "region": "miquella-s-haligtree",
       "graces": [
-        "sites-of-grace",
-        "prayer-room",
-        "elphael-inner-wall",
+        "Prayer Room",
+        "Elphael Inner Wall",
         "Drainage Channel",
-        "elphael-brace-of-the-haligtree",
-        "malenia-blade-of-miquella"
+        "Haligtree Roots",
+        "Malenia, Goddess of Rot"
       ],
       "is_optional": true,
       "bosses": [
@@ -42052,7 +42230,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "elphael-brace-of-the-haligtree"
+      "region": "elphael-brace-of-the-haligtree",
+      "graces": [
+        "Elphael Inner Wall"
+      ]
     }
   },
   {
@@ -42204,14 +42385,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "land-of-the-tower",
-      "graces": [
-        "Enir-Ilim: Outer Wall",
-        "First Rise",
-        "Spiral Rise",
-        "Cleansing Room Antechamber",
-        "gate-of-divinity"
-      ]
+      "region": "land-of-the-tower"
     }
   },
   {
@@ -43140,6 +43314,9 @@
     "variant": {
       "kind": "Location",
       "region": "leyndell-royal-capital",
+      "graces": [
+        "Erdtree Sanctuary"
+      ],
       "bosses": [
         "godfrey-first-elden-lord",
         "sir-gideon-ofnir-the-all-knowing"
@@ -43586,7 +43763,10 @@
       "Underground"
     ],
     "variant": {
-      "kind": "Location"
+      "kind": "Location",
+      "graces": [
+        "Nokstella Waterfall Basin"
+      ]
     }
   },
   {
@@ -48584,7 +48764,7 @@
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
       "graces": [
-        "melina"
+        "First Church of Marika"
       ],
       "notable_loot": [
         "somberstone-miner-s-bell-bearing-3",
@@ -49086,7 +49266,13 @@
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
       "graces": [
-        "7"
+        "Giants' Gravepost",
+        "Church of Repose",
+        "Foot of the Forge",
+        "Fire Giant",
+        "Forge of the Giants",
+        "Giants' Mountaintops Catacombs",
+        "Giant-Conquering Hero's Grave"
       ],
       "map_fragment": "Map: Mountaintops of the Giants, East",
       "bosses": [
@@ -49932,10 +50118,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "gravesite-plain",
-      "graces": [
-        "1"
-      ]
+      "region": "gravesite-plain"
     }
   },
   {
@@ -50621,7 +50804,14 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "mountaintops-of-the-giants"
+      "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Forbidden Lands",
+        "Grand Lift of Rold",
+        "Hidden Path to the Haligtree",
+        "Divine Tower of East Altus Gate",
+        "Divine Tower of East Altus"
+      ]
     }
   },
   {
@@ -50696,9 +50886,7 @@
       "kind": "Location",
       "region": "flame-peak",
       "graces": [
-        "sites-of-grace",
-        "melina",
-        "crumbling-farum-azula"
+        "Forge of the Giants"
       ],
       "npcs": [
         "melina"
@@ -51005,7 +51193,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "subterranean-shunning-grounds"
+      "region": "subterranean-shunning-grounds",
+      "graces": [
+        "Forsaken Depths"
+      ]
     }
   },
   {
@@ -51152,6 +51343,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Fort Haight West"
+      ],
       "npcs": [
         "kenneth-haight"
       ],
@@ -51198,6 +51392,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Seethewater Terminus"
+      ],
       "bosses": [
         "magma-wyrm"
       ],
@@ -51245,10 +51442,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "scadu-altus",
-      "graces": [
-        "2"
-      ]
+      "region": "scadu-altus"
     }
   },
   {
@@ -51418,6 +51612,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Fourth Church of Marika"
+      ],
       "notable_loot": [
         "sacred-tear"
       ]
@@ -51433,7 +51630,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "leyndell-ashen-capital"
+      "region": "leyndell-ashen-capital",
+      "graces": [
+        "Ashen Capital Fractured Marika"
+      ]
     }
   },
   {
@@ -51518,7 +51718,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "mountaintops-of-the-giants"
+      "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Freezing Lake"
+      ]
     }
   },
   {
@@ -51683,6 +51886,9 @@
     "variant": {
       "kind": "Location",
       "region": "subterranean-shunning-grounds",
+      "graces": [
+        "Frenzied Flame Proscription"
+      ],
       "npcs": [
         "lightseeker-hyetta",
         "melina",
@@ -51842,10 +52048,6 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
-      "graces": [
-        "frenzy-flaming-tower",
-        "converted-fringe-tower"
-      ],
       "notable_loot": [
         "stonesword-key",
         "frenzied-s-cookbook-1",
@@ -52148,7 +52350,7 @@
       "kind": "Location",
       "region": "limgrave",
       "graces": [
-        "sites-of-grace"
+        "Stranded Graveyard"
       ],
       "bosses": [
         "ulcerated-tree-spirit"
@@ -53275,6 +53477,9 @@
     "variant": {
       "kind": "Location",
       "region": "stone-coffin-fissure",
+      "graces": [
+        "Garden of Deep Purple"
+      ],
       "bosses": [
         "putrescent-knight"
       ],
@@ -53805,7 +54010,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "limgrave"
+      "region": "limgrave",
+      "graces": [
+        "Gatefront"
+      ]
     }
   },
   {
@@ -53838,6 +54046,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Gatefront"
+      ],
       "notable_loot": [
         "flail",
         "lordsworn-s-greatsword",
@@ -54207,6 +54418,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Gelmir Hero's Grave"
+      ],
       "bosses": [
         "red-wolf"
       ],
@@ -55089,6 +55303,9 @@
     "variant": {
       "kind": "Location",
       "region": "flame-peak",
+      "graces": [
+        "Giant-Conquering Hero's Grave"
+      ],
       "bosses": [
         "ancient-hero-of-zamor"
       ],
@@ -55410,8 +55627,7 @@
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
       "graces": [
-        "sites-of-grace",
-        "giants-mountaintop-catacombs"
+        "Giants' Mountaintops Catacombs"
       ],
       "notable_loot": [
         "grave-glovewort-7",
@@ -58319,7 +58535,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "stormveil-castle"
+      "region": "stormveil-castle",
+      "graces": [
+        "Godrick the Grafted"
+      ]
     }
   },
   {
@@ -62029,9 +62248,6 @@
     "variant": {
       "kind": "Location",
       "region": "foot-of-the-jagged-peak",
-      "graces": [
-        "1"
-      ],
       "npcs": [
         "dragon-communion-priestess",
         "ram"
@@ -62085,7 +62301,7 @@
       "kind": "Location",
       "region": "ainsel-river",
       "graces": [
-        "lake-of-rot"
+        "Grand Cloister"
       ],
       "bosses": [
         "astel-naturalborn-of-the-void"
@@ -62116,7 +62332,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "liurnia-of-the-lakes"
+      "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Grand Lift of Dectus"
+      ]
     }
   },
   {
@@ -62144,6 +62363,9 @@
     "variant": {
       "kind": "Location",
       "region": "forbidden-lands",
+      "graces": [
+        "Grand Lift of Rold"
+      ],
       "bosses": [
         "black-blade-kindred"
       ],
@@ -62912,9 +63134,6 @@
     "variant": {
       "kind": "Location",
       "region": "realm-of-shadow",
-      "graces": [
-        "30"
-      ],
       "is_legacy_dungeon": true,
       "map_fragment": "Map: Gravesite Plain",
       "npcs": [
@@ -65500,6 +65719,11 @@
     "variant": {
       "kind": "Location",
       "region": "caelid",
+      "graces": [
+        "Dragonbarrow West",
+        "Dragonbarrow Fork",
+        "Farum Greatbridge"
+      ],
       "npcs": [
         "gurranq-beast-clergyman",
         "isolated-merchant-dragonbarrow"
@@ -65646,6 +65870,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Groveside Cave"
+      ],
       "bosses": [
         "beastman-of-farum-azula"
       ],
@@ -65970,6 +66197,9 @@
     "variant": {
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Whiteridge Road"
+      ],
       "notable_loot": [
         "golden-rune-10",
         "smoldering-butterfly",
@@ -66981,7 +67211,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "miquella-s-haligtree"
+      "region": "miquella-s-haligtree",
+      "graces": [
+        "Haligtree Town"
+      ]
     }
   },
   {
@@ -68958,6 +69191,9 @@
     "variant": {
       "kind": "Location",
       "region": "capital-outskirts",
+      "graces": [
+        "Hermit Merchant's Shack"
+      ],
       "npcs": [
         "hermit-merchant-altus-plateau"
       ]
@@ -69024,6 +69260,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Primeval Sorcerer Azur"
+      ],
       "bosses": [
         "demi-human-queen-maggie"
       ],
@@ -69270,6 +69509,9 @@
     "variant": {
       "kind": "Location",
       "region": "consecrated-snowfield",
+      "graces": [
+        "Hidden Path to the Haligtree"
+      ],
       "bosses": [
         "mimic-tear"
       ],
@@ -69831,6 +70073,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Highroad Cave"
+      ],
       "bosses": [
         "guardian-golem-boss"
       ],
@@ -72376,6 +72621,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Impaler's Catacombs"
+      ],
       "bosses": [
         "erdtree-burial-watchdog"
       ],
@@ -74096,6 +74344,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Isolated Merchant's Shack"
+      ],
       "npcs": [
         "isolated-merchant-weeping-peninsula"
       ]
@@ -74585,7 +74836,7 @@
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
       "graces": [
-        "1"
+        "Jarburg"
       ]
     }
   },
@@ -75573,6 +75824,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Road to the Manor"
+      ],
       "bosses": [
         "royal-revenant"
       ],
@@ -76282,6 +76536,10 @@
     "variant": {
       "kind": "Location",
       "region": "ainsel-river",
+      "graces": [
+        "Lake of Rot Shoreside",
+        "Grand Cloister"
+      ],
       "notable_loot": [
         "scorpion-s-stinger",
         "immunizing-horn-charm-1",
@@ -76418,9 +76676,6 @@
     "variant": {
       "kind": "Location",
       "region": "charo-s-hidden-grave",
-      "graces": [
-        "1"
-      ],
       "bosses": [
         "lamenter"
       ],
@@ -76944,12 +77199,6 @@
         "belurat-tower-settlement",
         "enir-ilim",
         "rauh-base"
-      ],
-      "graces": [
-        "belurat-tower-settlement",
-        "Theatre of the Divine Beast",
-        "gate-of-divinity",
-        "church-of-the-bud"
       ]
     }
   },
@@ -77398,6 +77647,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Laskyar Ruins"
+      ],
       "notable_loot": [
         "smithing-stone-3",
         "ritual-pot",
@@ -78357,13 +78609,13 @@
       "kind": "Location",
       "region": "altus-plateau",
       "graces": [
-        "East Capital Rampart",
-        "Leyndell, Capital of Ash",
-        "erdtree-sanctuary",
-        "leyndell-royal-capital",
-        "Divine Bridge",
-        "elden-throne",
-        "fractured-marika-grace"
+        "Ashen Capital East Capital Rampart",
+        "Ashen Capital Leyndell, Capital of Ash",
+        "Ashen Capital Erdtree Sanctuary",
+        "Ashen Capital Queen's Bedchamber",
+        "Ashen Capital Divine Bridge",
+        "Ashen Capital Elden Throne",
+        "Ashen Capital Fractured Marika"
       ],
       "bosses": [
         "sir-gideon-ofnir-the-all-knowing",
@@ -78434,6 +78686,9 @@
     "variant": {
       "kind": "Location",
       "region": "leyndell-royal-capital",
+      "graces": [
+        "Leyndell Catacombs"
+      ],
       "bosses": [
         "esgar-priest-of-blood"
       ],
@@ -78683,6 +78938,17 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Erdtree Sanctuary",
+        "East Capital Rampart",
+        "Lower Capital Church",
+        "Avenue Balcony",
+        "West Capital Rampart",
+        "Queen's Bedchamber",
+        "Fortified Manor, First Floor",
+        "Divine Bridge",
+        "Elden Throne"
+      ],
       "bosses": [
         "godfrey-first-elden-lord",
         "morgott-the-omen-king"
@@ -79683,6 +79949,57 @@
         "stormhill",
         "weeping-peninsula"
       ],
+      "graces": [
+        "First Step",
+        "Church of Elleh",
+        "Gatefront",
+        "Waypoint Ruins Cellar",
+        "Artist's Shack",
+        "Third Church of Marika",
+        "Fort Haight West",
+        "Agheel Lake South",
+        "Agheel Lake North",
+        "Church of Dragon Communion",
+        "Seaside Ruins",
+        "Mistwood Outskirts",
+        "Murkwater Coast",
+        "Summonwater Village Outskirts",
+        "Stormfoot Catacombs",
+        "Murkwater Catacombs",
+        "Groveside Cave",
+        "Coastal Cave",
+        "Murkwater Cave",
+        "Highroad Cave",
+        "Limgrave Tunnels",
+        "Cave of Knowledge",
+        "Stranded Graveyard",
+        "Stormhill Shack",
+        "Castleward Tunnel",
+        "Margit, the Fell Omen",
+        "Warmaster's Shack",
+        "Saintsbridge",
+        "Deathtouched Catacombs",
+        "Limgrave Tower Bridge",
+        "Divine Tower of Limgrave",
+        "Church of Pilgrimage",
+        "Castle Morne Rampart",
+        "Tombsward",
+        "South of the Lookout Tower",
+        "Ailing Village Outskirts",
+        "Beside the Crater-Pocked  Glade",
+        "Isolated Merchant's Shack",
+        "Fourth Church of Marika",
+        "Bridge of Sacrifice",
+        "Castle Morne Lift",
+        "Behind the Castle",
+        "Beside the Rampart Gaol",
+        "Morne Moangrave",
+        "Impaler's Catacombs",
+        "Tombsward Catacombs",
+        "Earthbore Cave",
+        "Tombsward Cave",
+        "Morne Tunnel"
+      ],
       "is_legacy_dungeon": true,
       "npcs": [
         "white-mask-varre",
@@ -79776,6 +80093,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Limgrave Tunnels"
+      ],
       "bosses": [
         "stonedigger-troll"
       ],
@@ -80295,7 +80615,69 @@
         "ruin-strewn-precipice"
       ],
       "graces": [
-        "63"
+        "Lake-Facing Cliffs",
+        "Liurnia Lake Shore",
+        "Laskyar Ruins",
+        "Scenic Isle",
+        "Academy Gate Town",
+        "South Raya Lucaria Gate",
+        "Main Academy Gate",
+        "Liurnia Highway South",
+        "Liurnia Highway North",
+        "Gate Town Bridge",
+        "Artist's Shack (Liurnia)",
+        "Eastern Liurnia Lake Shore",
+        "Jarburg",
+        "Ranni's Chamber",
+        "Eastern Tableland",
+        "Cathedral of Vows",
+        "Ruined Labyrinth",
+        "Mausoleum Compound",
+        "Slumbering Wolf's Shack",
+        "Boilprawn Shack",
+        "Fallen Ruins on the Lake",
+        "Folly on the Lake",
+        "Village of the Albinaurics",
+        "Converted Tower",
+        "Revenger's Shack",
+        "Temple Quarter",
+        "Crystalline Woods",
+        "Foot of the Four Belfries",
+        "The Four Belfries",
+        "Sorcerer's Isle",
+        "East Gate Bridge Trestle",
+        "Gate Town North",
+        "Northern Liurnia Lake Shore",
+        "Road to the Manor",
+        "Main Caria Manor Gate",
+        "Manor Upper Level",
+        "Manor Lower Level",
+        "Royal Moongazing Grounds",
+        "Ranni's Rise",
+        "Behind Caria Manor",
+        "The Ravine",
+        "Ravine-Veiled Village",
+        "Cliffbottom Catacombs",
+        "Road's End Catacombs",
+        "Black Knife Catacombs",
+        "Stillwater Cave",
+        "Lakeside Crystal Cave",
+        "Academy Crystal Cave",
+        "Raya Lucaria Crystal Tunnel",
+        "Study Hall Entrance",
+        "Liurnia Tower Bridge",
+        "Divine Tower of Liurnia",
+        "East Raya Lucaria Gate",
+        "Bellum Church",
+        "Grand Lift of Dectus",
+        "Frenzied Flame Village Outskirts",
+        "Church of Inhibition",
+        "Ruin-Strewn Precipice",
+        "Ruin-Strewn Precipice Overlook",
+        "Magma Wyrm Makar",
+        "Moonlight Altar",
+        "Cathedral of Manus Celes",
+        "Altar South"
       ],
       "is_legacy_dungeon": true,
       "map_fragment": "Map: Liurnia, East\nMap: Liurnia, North\nMap: Liurnia, West",
@@ -82046,6 +82428,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Erdtree-Gazing Hill"
+      ],
       "bosses": [
         "demi-human-queen"
       ],
@@ -83487,6 +83872,9 @@
     "variant": {
       "kind": "Location",
       "region": "elphael-brace-of-the-haligtree",
+      "graces": [
+        "Malenia, Goddess of Rot"
+      ],
       "bosses": [
         "malenia-blade-of-miquella",
         "malenia-blade-of-miquella"
@@ -84413,6 +84801,9 @@
     "variant": {
       "kind": "Location",
       "region": "crumbling-farum-azula",
+      "graces": [
+        "Maliketh, the Black Blade"
+      ],
       "bosses": [
         "maliketh-the-black-blade",
         "maliketh-the-black-blade"
@@ -88986,6 +89377,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Bower of Bounty"
+      ],
       "bosses": [
         "wormface"
       ],
@@ -89134,7 +89528,7 @@
       "kind": "Location",
       "region": "capital-outskirts",
       "graces": [
-        "1"
+        "Minor Erdtree Church"
       ]
     }
   },
@@ -89358,6 +89752,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Road of Iniquity"
+      ],
       "bosses": [
         "ulcerated-tree-spirit"
       ],
@@ -89677,6 +90074,17 @@
     "variant": {
       "kind": "Location",
       "region": "consecrated-snowfield",
+      "graces": [
+        "Haligtree Canopy",
+        "Haligtree Town",
+        "Haligtree Town Plaza",
+        "Haligtree Promenade",
+        "Prayer Room",
+        "Elphael Inner Wall",
+        "Drainage Channel",
+        "Haligtree Roots",
+        "Malenia, Goddess of Rot"
+      ],
       "is_optional": true,
       "bosses": [
         "loretta",
@@ -89851,6 +90259,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Bower of Bounty"
+      ],
       "notable_loot": [
         "Mirage Riddle",
         "unseen-blade",
@@ -91005,9 +91416,9 @@
       "kind": "Location",
       "region": "siofra-river",
       "graces": [
-        "sites-of-grace",
-        "mohg-lord-of-blood",
-        "bosses"
+        "Dynasty Mausoleum Entrance",
+        "Dynasty Mausoleum Midpoint",
+        "Cocoon of the Empyrean"
       ],
       "bosses": [
         "white-mask-varre",
@@ -91080,14 +91491,10 @@
       "kind": "Location",
       "region": "siofra-river",
       "graces": [
-        "palace-approach-ledge-road",
+        "Palace Approach Ledge-Road",
         "Dynasty Mausoleum Entrance",
         "Dynasty Mausoleum Midpoint",
-        "cocoon-of-the-empyrean",
-        "palace-approach-ledge-road",
-        "Dynasty Mausoleum Entrance",
-        "Dynasty Mausoleum Midpoint",
-        "cocoon-of-the-empyrean"
+        "Cocoon of the Empyrean"
       ],
       "bosses": [
         "mohg-lord-of-blood"
@@ -91501,7 +91908,9 @@
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
       "graces": [
-        "3"
+        "Moonlight Altar",
+        "Cathedral of Manus Celes",
+        "Altar South"
       ],
       "map_fragment": "Map: Liurnia, West",
       "bosses": [
@@ -91805,10 +92214,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "scadu-altus",
-      "graces": [
-        "1"
-      ]
+      "region": "scadu-altus"
     }
   },
   {
@@ -92130,6 +92536,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Morne Tunnel"
+      ],
       "bosses": [
         "misbegotten"
       ],
@@ -92362,6 +92771,37 @@
         "flame-peak",
         "consecrated-snowfield"
       ],
+      "graces": [
+        "Forbidden Lands",
+        "Grand Lift of Rold",
+        "Hidden Path to the Haligtree",
+        "Divine Tower of East Altus Gate",
+        "Divine Tower of East Altus",
+        "Zamor Ruins",
+        "Ancient Snow Valley Ruins",
+        "Freezing Lake",
+        "First Church of Marika",
+        "Whiteridge Road",
+        "Snow Valley Ruins Overlook",
+        "Castle Sol Main Gate",
+        "Church of the Eclipse",
+        "Castle Sol Rooftop",
+        "Spiritcaller Cave",
+        "Giants' Gravepost",
+        "Church of Repose",
+        "Foot of the Forge",
+        "Fire Giant",
+        "Forge of the Giants",
+        "Giants' Mountaintops Catacombs",
+        "Giant-Conquering Hero's Grave",
+        "Consecrated Snowfield",
+        "Inner Consecrated Snowfield",
+        "Ordina Liturgical Town Day",
+        "Apostate Derelict",
+        "Consecrated Snowfield Catacombs",
+        "Cave of the Forlorn",
+        "Yelough Anix Tunnel"
+      ],
       "is_legacy_dungeon": true,
       "npcs": [
         "melina",
@@ -92388,7 +92828,21 @@
     "description": "Mt. Gelmir is a subregion in, located on the Altus Plateau.",
     "variant": {
       "kind": "Location",
-      "region": "altus-plateau"
+      "region": "altus-plateau",
+      "graces": [
+        "Bridge of Iniquity",
+        "First Mt Gelmir Campsite",
+        "Ninth Mt Gelmir Campsite",
+        "Road of Iniquity",
+        "Seethewater River",
+        "Seethewater Terminus",
+        "Craftsman's Shack",
+        "Primeval Sorcerer Azur",
+        "Wyndham Catacombs",
+        "Gelmir Hero's Grave",
+        "Seethewater Cave",
+        "Volcano Cave"
+      ]
     }
   },
   {
@@ -92466,6 +92920,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Murkwater Catacombs"
+      ],
       "bosses": [
         "grave-warden-duelist"
       ],
@@ -92515,6 +92972,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Murkwater Cave"
+      ],
       "npcs": [
         "patches"
       ],
@@ -92940,7 +93400,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "deeproot-depths"
+      "region": "deeproot-depths",
+      "graces": [
+        "The Nameless Eternal City"
+      ]
     }
   },
   {
@@ -94263,6 +94726,9 @@
     "variant": {
       "kind": "Location",
       "region": "nokron-eternal-city",
+      "graces": [
+        "Night's Sacred Ground"
+      ],
       "notable_loot": [
         "Mimic Tear Ashes",
         "fingerslayer-blade",
@@ -94826,6 +95292,13 @@
     "variant": {
       "kind": "Location",
       "region": "siofra-river",
+      "graces": [
+        "Nokron, Eternal City",
+        "Mimic Tear",
+        "Ancestral Woods",
+        "Night's Sacred Ground",
+        "Aqueduct-Facing Cliffs"
+      ],
       "npcs": [
         "d-beholder-of-death",
         "mimic-tear",
@@ -94894,6 +95367,10 @@
     "variant": {
       "kind": "Location",
       "region": "ainsel-river",
+      "graces": [
+        "Nokstella, Eternal City",
+        "Nokstella Waterfall Basin"
+      ],
       "notable_loot": [
         "smithing-stone-6",
         "somber-smithing-stone-6",
@@ -97526,6 +98003,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Old Altus Tunnel"
+      ],
       "bosses": [
         "stonedigger-troll"
       ],
@@ -98890,6 +99370,9 @@
     "variant": {
       "kind": "Location",
       "region": "consecrated-snowfield",
+      "graces": [
+        "Ordina Liturgical Town Day"
+      ],
       "notable_loot": [
         "Black Knife Set",
         "crystal-dart",
@@ -99346,7 +99829,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "mohgwyn-palace"
+      "region": "mohgwyn-palace",
+      "graces": [
+        "Palace Approach Ledge-Road"
+      ]
     }
   },
   {
@@ -100265,6 +100751,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Perfumer's Grotto"
+      ],
       "bosses": [
         "omenkiller",
         "miranda-the-blighted-bloom"
@@ -102068,7 +102557,10 @@
     "description": "The Prayer Room is a Site of Grace in.",
     "variant": {
       "kind": "Location",
-      "region": "elphael-brace-of-the-haligtree"
+      "region": "elphael-brace-of-the-haligtree",
+      "graces": [
+        "Prayer Room"
+      ]
     }
   },
   {
@@ -102848,7 +103340,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "deeproot-depths"
+      "region": "deeproot-depths",
+      "graces": [
+        "Prince of Death's Throne"
+      ]
     }
   },
   {
@@ -103190,10 +103685,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "gravesite-plain",
-      "graces": [
-        "1"
-      ]
+      "region": "gravesite-plain"
     }
   },
   {
@@ -106417,10 +106909,6 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
-      "graces": [
-        "ranni-s-rise",
-        "ranni-the-witch"
-      ],
       "bosses": [
         "glintstone-dragon-adula"
       ],
@@ -106848,9 +107336,6 @@
     "variant": {
       "kind": "Location",
       "region": "land-of-the-tower",
-      "graces": [
-        "5"
-      ],
       "map_fragment": "Map: Rauh Ruins",
       "bosses": [
         "death-knight",
@@ -107034,6 +107519,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Raya Lucaria Crystal Tunnel"
+      ],
       "bosses": [
         "crystalian"
       ],
@@ -107081,6 +107569,9 @@
     "variant": {
       "kind": "Location",
       "region": "academy-of-raya-lucaria",
+      "graces": [
+        "Raya Lucaria Grand Library"
+      ],
       "bosses": [
         "rennala-queen-of-the-full-moon"
       ]
@@ -107263,6 +107754,9 @@
       "kind": "Location",
       "sub_regions": [
         "list"
+      ],
+      "graces": [
+        "Garden of Deep Purple"
       ],
       "is_legacy_dungeon": true
     }
@@ -110383,6 +110877,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Revenger's Shack"
+      ],
       "notable_loot": [
         "raw-meat-dumpling",
         "shabriri-grape",
@@ -111022,10 +111519,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "gravesite-plain",
-      "graces": [
-        "1"
-      ]
+      "region": "gravesite-plain"
     }
   },
   {
@@ -111180,6 +111674,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Road's End Catacombs"
+      ],
       "bosses": [
         "spiritcaller-snail"
       ],
@@ -114157,6 +114654,12 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Ravine-Veiled Village",
+        "Ruin-Strewn Precipice",
+        "Ruin-Strewn Precipice Overlook",
+        "Magma Wyrm Makar"
+      ],
       "bosses": [
         "magma-wyrm"
       ],
@@ -115747,6 +116250,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Sage's Cave"
+      ],
       "bosses": [
         "black-knife-assassin",
         "necromancer-garris"
@@ -115843,6 +116349,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Sainted Hero's Grave"
+      ],
       "bosses": [
         "ancient-hero-of-zamor"
       ],
@@ -115895,7 +116404,10 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "stormhill"
+      "region": "stormhill",
+      "graces": [
+        "Saintsbridge"
+      ]
     }
   },
   {
@@ -116495,9 +117007,6 @@
     "variant": {
       "kind": "Location",
       "region": "realm-of-shadow",
-      "graces": [
-        "6"
-      ],
       "map_fragment": "Map: Scadu Altus",
       "bosses": [
         "commander-gaius",
@@ -117306,9 +117815,6 @@
     "variant": {
       "kind": "Location",
       "region": "gravesite-plain",
-      "graces": [
-        "1"
-      ],
       "bosses": [
         "furnace-golem"
       ]
@@ -117434,10 +117940,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "rauh-base",
-      "graces": [
-        "1"
-      ]
+      "region": "rauh-base"
     }
   },
   {
@@ -117804,6 +118307,9 @@
     "variant": {
       "kind": "Location",
       "region": "capital-outskirts",
+      "graces": [
+        "Sealed Tunnel"
+      ],
       "bosses": [
         "onyx-lord"
       ],
@@ -118057,6 +118563,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Seethewater Cave"
+      ],
       "bosses": [
         "kindred-of-rot"
       ],
@@ -118351,9 +118860,6 @@
     "variant": {
       "kind": "Location",
       "region": "caelid",
-      "graces": [
-        "nox"
-      ],
       "bosses": [
         "nox"
       ],
@@ -119578,9 +120084,6 @@
     "variant": {
       "kind": "Location",
       "region": "realm-of-shadow",
-      "graces": [
-        "2"
-      ],
       "map_fragment": "Map: Scadu Altus",
       "npcs": [
         "fire-knight-queelign",
@@ -121249,6 +121752,10 @@
     "variant": {
       "kind": "Location",
       "region": "nokron-eternal-city",
+      "graces": [
+        "Aqueduct-Facing Cliffs",
+        "Great Waterfall Basin"
+      ],
       "bosses": [
         "valiant-gargoyle"
       ],
@@ -121319,6 +121826,21 @@
         "nokron-eternal-city",
         "mohgwyn-palace",
         "night-s-sacred-ground"
+      ],
+      "graces": [
+        "Siofra River Well Depths",
+        "Siofra River Bank",
+        "Worshippers' Woods",
+        "Below the Well",
+        "Nokron, Eternal City",
+        "Mimic Tear",
+        "Ancestral Woods",
+        "Night's Sacred Ground",
+        "Aqueduct-Facing Cliffs",
+        "Palace Approach Ledge-Road",
+        "Dynasty Mausoleum Entrance",
+        "Dynasty Mausoleum Midpoint",
+        "Cocoon of the Empyrean"
       ],
       "bosses": [
         "ancestor-spirit"
@@ -121520,7 +122042,295 @@
       }
     ],
     "variant": {
-      "kind": "Location"
+      "kind": "Location",
+      "graces": [
+        "promo",
+        "Table of Lost Grace",
+        "First Step",
+        "Church of Elleh",
+        "Gatefront",
+        "Waypoint Ruins Cellar",
+        "Artist's Shack",
+        "Third Church of Marika",
+        "Fort Haight West",
+        "Agheel Lake South",
+        "Agheel Lake North",
+        "Church of Dragon Communion",
+        "Seaside Ruins",
+        "Mistwood Outskirts",
+        "Murkwater Coast",
+        "Summonwater Village Outskirts",
+        "Stormfoot Catacombs",
+        "Murkwater Catacombs",
+        "Groveside Cave",
+        "Coastal Cave",
+        "Murkwater Cave",
+        "Highroad Cave",
+        "Limgrave Tunnels",
+        "Cave of Knowledge",
+        "Stranded Graveyard",
+        "Stormhill Shack",
+        "Castleward Tunnel",
+        "Margit, the Fell Omen",
+        "Warmaster's Shack",
+        "Saintsbridge",
+        "Deathtouched Catacombs",
+        "Limgrave Tower Bridge",
+        "Divine Tower of Limgrave",
+        "Church of Pilgrimage",
+        "Castle Morne Rampart",
+        "Tombsward",
+        "South of the Lookout Tower",
+        "Ailing Village Outskirts",
+        "Beside the Crater-Pocked  Glade",
+        "Isolated Merchant's Shack",
+        "Fourth Church of Marika",
+        "Bridge of Sacrifice",
+        "Castle Morne Lift",
+        "Behind the Castle",
+        "Beside the Rampart Gaol",
+        "Morne Moangrave",
+        "Impaler's Catacombs",
+        "Tombsward Catacombs",
+        "Earthbore Cave",
+        "Tombsward Cave",
+        "Morne Tunnel",
+        "Stormveil Main Gate",
+        "Gateside Chamber",
+        "Stormveil Cliffside",
+        "Rampart Tower",
+        "Liftside Chamber",
+        "Secluded Cell",
+        "Godrick the Grafted",
+        "Lake-Facing Cliffs",
+        "Liurnia Lake Shore",
+        "Laskyar Ruins",
+        "Scenic Isle",
+        "Academy Gate Town",
+        "South Raya Lucaria Gate",
+        "Main Academy Gate",
+        "Liurnia Highway South",
+        "Liurnia Highway North",
+        "Gate Town Bridge",
+        "Artist's Shack (Liurnia)",
+        "Eastern Liurnia Lake Shore",
+        "Jarburg",
+        "Ranni's Chamber",
+        "Eastern Tableland",
+        "Cathedral of Vows",
+        "Ruined Labyrinth",
+        "Mausoleum Compound",
+        "Slumbering Wolf's Shack",
+        "Boilprawn Shack",
+        "Fallen Ruins on the Lake",
+        "Folly on the Lake",
+        "Village of the Albinaurics",
+        "Converted Tower",
+        "Revenger's Shack",
+        "Temple Quarter",
+        "Crystalline Woods",
+        "Foot of the Four Belfries",
+        "The Four Belfries",
+        "Sorcerer's Isle",
+        "East Gate Bridge Trestle",
+        "Gate Town North",
+        "Northern Liurnia Lake Shore",
+        "Road to the Manor",
+        "Main Caria Manor Gate",
+        "Manor Upper Level",
+        "Manor Lower Level",
+        "Royal Moongazing Grounds",
+        "Ranni's Rise",
+        "Behind Caria Manor",
+        "The Ravine",
+        "Ravine-Veiled Village",
+        "Cliffbottom Catacombs",
+        "Road's End Catacombs",
+        "Black Knife Catacombs",
+        "Stillwater Cave",
+        "Lakeside Crystal Cave",
+        "Academy Crystal Cave",
+        "Raya Lucaria Crystal Tunnel",
+        "Study Hall Entrance",
+        "Liurnia Tower Bridge",
+        "Divine Tower of Liurnia",
+        "East Raya Lucaria Gate",
+        "Bellum Church",
+        "Grand Lift of Dectus",
+        "Frenzied Flame Village Outskirts",
+        "Church of Inhibition",
+        "Ruin-Strewn Precipice",
+        "Ruin-Strewn Precipice Overlook",
+        "Magma Wyrm Makar",
+        "Moonlight Altar",
+        "Cathedral of Manus Celes",
+        "Altar South",
+        "Church of the Cuckoo",
+        "Schoolhouse Classroom",
+        "Debate Parlor",
+        "Raya Lucaria Grand Library",
+        "Abandoned Coffin",
+        "Erdtree-Gazing Hill",
+        "Altus Plateau",
+        "Altus Highway Junction",
+        "Forest-Spanning Greatbridge",
+        "Bower of Bounty",
+        "Windmill Village",
+        "Windmill Heights",
+        "Road of Iniquity Side Path",
+        "Rampartside Path",
+        "Shaded Castle Ramparts",
+        "Shaded Castle Inner Gate",
+        "Castellan's Hall",
+        "Unsightly Catacombs",
+        "Sainted Hero's Grave",
+        "Sage's Cave",
+        "Perfumer's Grotto",
+        "Old Altus Tunnel",
+        "Altus Tunnel",
+        "Bridge of Iniquity",
+        "First Mt Gelmir Campsite",
+        "Ninth Mt Gelmir Campsite",
+        "Road of Iniquity",
+        "Seethewater River",
+        "Seethewater Terminus",
+        "Craftsman's Shack",
+        "Primeval Sorcerer Azur",
+        "Wyndham Catacombs",
+        "Gelmir Hero's Grave",
+        "Seethewater Cave",
+        "Volcano Cave",
+        "Outer Wall Phantom Tree",
+        "Minor Erdtree Church",
+        "Outer Wall Battleground",
+        "Hermit Merchant's Shack",
+        "Capital Rampart",
+        "Auriza Side Tomb",
+        "Auriza Hero's Grave",
+        "Sealed Tunnel",
+        "Divine Tower of West Altus- Gate",
+        "Divine Tower of West Altus",
+        "Volcano Manor",
+        "Prison Town Church",
+        "Temple of Eiglay",
+        "Guest Hall",
+        "Audience Pathway",
+        "Abductor Virgin",
+        "Subterranean Inquisition Chamber",
+        "Rykard, Lord of Blasphemy",
+        "Erdtree Sanctuary",
+        "East Capital Rampart",
+        "Lower Capital Church",
+        "Avenue Balcony",
+        "West Capital Rampart",
+        "Queen's Bedchamber",
+        "Fortified Manor, First Floor",
+        "Divine Bridge",
+        "Elden Throne",
+        "Underground Roadside",
+        "Forsaken Depths",
+        "Leyndell Catacombs",
+        "Frenzied Flame Proscription",
+        "Cathedral of the Forsaken",
+        "Ashen Capital East Capital Rampart",
+        "Ashen Capital Leyndell, Capital of Ash",
+        "Ashen Capital Erdtree Sanctuary",
+        "Ashen Capital Queen's Bedchamber",
+        "Ashen Capital Divine Bridge",
+        "Ashen Capital Elden Throne",
+        "Ashen Capital Fractured Marika",
+        "Smoldering Wall",
+        "Caelid Highway South",
+        "Southern Aeonia Swamp Bank",
+        "Impassable Greatbridge",
+        "Redmane Castle Plaza",
+        "Aeonia Swamp Shore",
+        "Astray from Caelid Highway North",
+        "Heart of Aeonia",
+        "Inner Aeonia",
+        "Dragonbarrow West",
+        "Dragonbarrow Fork",
+        "Farum Greatbridge",
+        "Forbidden Lands",
+        "Grand Lift of Rold",
+        "Hidden Path to the Haligtree",
+        "Divine Tower of East Altus Gate",
+        "Divine Tower of East Altus",
+        "Zamor Ruins",
+        "Ancient Snow Valley Ruins",
+        "Freezing Lake",
+        "First Church of Marika",
+        "Whiteridge Road",
+        "Snow Valley Ruins Overlook",
+        "Castle Sol Main Gate",
+        "Church of the Eclipse",
+        "Castle Sol Rooftop",
+        "Spiritcaller Cave",
+        "Giants' Gravepost",
+        "Church of Repose",
+        "Foot of the Forge",
+        "Fire Giant",
+        "Forge of the Giants",
+        "Giants' Mountaintops Catacombs",
+        "Giant-Conquering Hero's Grave",
+        "Consecrated Snowfield",
+        "Inner Consecrated Snowfield",
+        "Ordina Liturgical Town Day",
+        "Apostate Derelict",
+        "Consecrated Snowfield Catacombs",
+        "Cave of the Forlorn",
+        "Yelough Anix Tunnel",
+        "Haligtree Canopy",
+        "Haligtree Town",
+        "Haligtree Town Plaza",
+        "Haligtree Promenade",
+        "Prayer Room",
+        "Elphael Inner Wall",
+        "Drainage Channel",
+        "Haligtree Roots",
+        "Malenia, Goddess of Rot",
+        "Ainsel River Well Depths",
+        "Ainsel River Sluice Gate",
+        "Ainsel River Downstream",
+        "Dragonkin Soldier of Nokstella",
+        "Astel, Naturalborn of the Void",
+        "Ainsel River Main",
+        "Nokstella, Eternal City",
+        "Nokstella Waterfall Basin",
+        "Lake of Rot Shoreside",
+        "Grand Cloister",
+        "Nokron, Eternal City",
+        "Mimic Tear",
+        "Ancestral Woods",
+        "Night's Sacred Ground",
+        "Aqueduct-Facing Cliffs",
+        "Siofra River Well Depths",
+        "Siofra River Bank",
+        "Worshippers' Woods",
+        "Below the Well",
+        "Palace Approach Ledge-Road",
+        "Dynasty Mausoleum Entrance",
+        "Dynasty Mausoleum Midpoint",
+        "Cocoon of the Empyrean",
+        "Root-Facing Cliffs",
+        "Great Waterfall Crest",
+        "Deeproot Depths",
+        "The Nameless Eternal City",
+        "Across the Roots",
+        "Prince of Death's Throne",
+        "Crumbling Beast Grave",
+        "Crumbling Beast Grave Depths",
+        "Tempest-Facing Balcony",
+        "Dragon Temple",
+        "Dragon Temple Transept",
+        "Dragon Temple Altar",
+        "Dragon Temple Lift",
+        "Dragon Temple Rooftop",
+        "Beside the Great Bridge",
+        "Dragonlord Placidusax",
+        "Maliketh, the Black Blade",
+        "Garden of Deep Purple"
+      ]
     }
   },
   {
@@ -121784,10 +122594,6 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
-      "graces": [
-        "lakeside-crystal-cave",
-        "bloodhound-knight"
-      ],
       "npcs": [
         "latenna-the-albinauric",
         "lobo"
@@ -125829,6 +126635,9 @@
     "variant": {
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Spiritcaller Cave"
+      ],
       "bosses": [
         "spiritcaller-snail",
         "godskin-apostle",
@@ -127535,6 +128344,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Stillwater Cave"
+      ],
       "bosses": [
         "cleanrot-knight"
       ],
@@ -127705,11 +128517,7 @@
       "kind": "Location",
       "region": "realm-of-shadow",
       "graces": [
-        "Stone Coffin Fissure",
-        "Fissure Cross",
-        "Fissure Waypoint",
-        "Fissure Depths",
-        "garden-of-deep-purple"
+        "Garden of Deep Purple"
       ],
       "bosses": [
         "putrescent-knight"
@@ -127806,7 +128614,7 @@
       "kind": "Location",
       "region": "leyndell-ashen-capital",
       "graces": [
-        "1"
+        "Ashen Capital Fractured Marika"
       ],
       "bosses": [
         "radagon-of-the-golden-order",
@@ -128193,6 +129001,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Stormfoot Catacombs"
+      ],
       "bosses": [
         "erdtree-burial-watchdog"
       ],
@@ -128235,6 +129046,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Gatefront"
+      ],
       "notable_loot": [
         "golden-rune-1",
         "arrow-s-reach-talisman"
@@ -128377,6 +129191,16 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Stormhill Shack",
+        "Castleward Tunnel",
+        "Margit, the Fell Omen",
+        "Warmaster's Shack",
+        "Saintsbridge",
+        "Deathtouched Catacombs",
+        "Limgrave Tower Bridge",
+        "Divine Tower of Limgrave"
+      ],
       "npcs": [
         "roderika-spirit-tuner",
         "knight-bernahl",
@@ -128463,6 +129287,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Stormhill Shack"
+      ],
       "npcs": [
         "roderika-spirit-tuner"
       ],
@@ -128537,10 +129364,13 @@
       "kind": "Location",
       "region": "limgrave",
       "graces": [
-        "margit-the-fell-omen",
-        "gatekeeper-gostoc",
-        "banished-knight",
-        "omen"
+        "Stormveil Main Gate",
+        "Gateside Chamber",
+        "Stormveil Cliffside",
+        "Rampart Tower",
+        "Liftside Chamber",
+        "Secluded Cell",
+        "Godrick the Grafted"
       ],
       "is_optional": true,
       "bosses": [
@@ -128659,7 +129489,8 @@
       "kind": "Location",
       "region": "limgrave",
       "graces": [
-        "2"
+        "Cave of Knowledge",
+        "Stranded Graveyard"
       ],
       "npcs": [
         "stranded-souls",
@@ -128937,6 +129768,10 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Subterranean Inquisition Chamber",
+        "Abductor Virgin"
+      ],
       "bosses": [
         "abductor-virgin"
       ],
@@ -128985,20 +129820,10 @@
       "region": "leyndell-royal-capital",
       "graces": [
         "Underground Roadside",
-        "forsaken-depths",
-        "leyndell-catacombs",
-        "frenzied-flame-proscription",
-        "cathedral-of-the-forsaken",
-        "Underground Roadside",
-        "sites-of-grace",
-        "forsaken-depths",
-        "mohg-lord-of-blood",
-        "leyndell-catacombs",
-        "cathedral-of-the-forsaken",
-        "mohg-lord-of-blood",
-        "frenzied-flame-proscription",
-        "mohg-lord-of-blood",
-        "three-fingers"
+        "Forsaken Depths",
+        "Leyndell Catacombs",
+        "Frenzied Flame Proscription",
+        "Cathedral of the Forsaken"
       ],
       "bosses": [
         "mohg-lord-of-blood"
@@ -129071,6 +129896,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Summonwater Village Outskirts"
+      ],
       "bosses": [
         "tibia-mariner"
       ],
@@ -129369,6 +130197,12 @@
     "variant": {
       "kind": "Location",
       "region": "caelid",
+      "graces": [
+        "Aeonia Swamp Shore",
+        "Astray from Caelid Highway North",
+        "Heart of Aeonia",
+        "Inner Aeonia"
+      ],
       "notable_loot": [
         "golden-rune-4",
         "somber-smithing-stone-4",
@@ -130626,6 +131460,9 @@
     "variant": {
       "kind": "Location",
       "region": "volcano-manor",
+      "graces": [
+        "Temple of Eiglay"
+      ],
       "bosses": [
         "godskin-noble"
       ],
@@ -130670,6 +131507,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Temple Quarter"
+      ],
       "bosses": [
         "glintstone-dragon-smarag"
       ],
@@ -130708,10 +131548,7 @@
     ],
     "variant": {
       "kind": "Location",
-      "region": "rauh-base",
-      "graces": [
-        "1"
-      ]
+      "region": "rauh-base"
     }
   },
   {
@@ -130782,6 +131619,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Sorcerer's Isle"
+      ],
       "notable_loot": [
         "memory-stone"
       ]
@@ -130945,6 +131785,10 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Foot of the Four Belfries",
+        "The Four Belfries"
+      ],
       "notable_loot": [
         "imbued-sword-key"
       ]
@@ -131047,6 +131891,11 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Shaded Castle Ramparts",
+        "Shaded Castle Inner Gate",
+        "Castellan's Hall"
+      ],
       "bosses": [
         "elemer-of-the-briar"
       ],
@@ -131588,6 +132437,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Third Church of Marika"
+      ],
       "notable_loot": [
         "flask-of-wondrous-physick",
         "crimson-crystal-tear",
@@ -131884,8 +132736,8 @@
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
       "graces": [
-        "ranni-s-rise",
-        "ranni-the-witch"
+        "Ranni's Rise",
+        "Ranni's Chamber"
       ],
       "bosses": [
         "glintstone-dragon-adula"
@@ -132111,6 +132963,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Tombsward Catacombs"
+      ],
       "bosses": [
         "cemetery-shade"
       ],
@@ -132159,6 +133014,9 @@
     "variant": {
       "kind": "Location",
       "region": "weeping-peninsula",
+      "graces": [
+        "Tombsward Cave"
+      ],
       "bosses": [
         "miranda-the-blighted-bloom"
       ],
@@ -134909,14 +135767,9 @@
       "kind": "Location",
       "region": "ainsel-river",
       "graces": [
-        "sites-of-grace",
         "Ainsel River Sluice Gate",
-        "Ainsel River Well Depths",
         "Ainsel River Downstream",
-        "withered-astel",
-        "ainsel-river-main",
-        "renna-s-rise",
-        "miniature-ranni"
+        "Ainsel River Main"
       ],
       "npcs": [
         "hermit-merchant-ainsel-river"
@@ -135020,6 +135873,10 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Mausoleum Compound",
+        "Ruined Labyrinth"
+      ],
       "notable_loot": [
         "frenzyflame-stone",
         "spiralhorn-shield",
@@ -135348,6 +136205,9 @@
     "variant": {
       "kind": "Location",
       "region": "altus-plateau",
+      "graces": [
+        "Unsightly Catacombs"
+      ],
       "bosses": [
         "perfumer",
         "misbegotten-warrior"
@@ -136614,6 +137474,9 @@
     "variant": {
       "kind": "Location",
       "region": "liurnia-of-the-lakes",
+      "graces": [
+        "Village of the Albinaurics"
+      ],
       "bosses": [
         "omenkiller"
       ],
@@ -136928,6 +137791,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Volcano Cave"
+      ],
       "bosses": [
         "demi-human-queen-margot"
       ],
@@ -136967,11 +137833,11 @@
       "graces": [
         "Volcano Manor",
         "Prison Town Church",
-        "temple-of-eiglay",
+        "Temple of Eiglay",
         "Guest Hall",
         "Audience Pathway",
         "Abductor Virgin",
-        "subterranean-inquisition-chamber",
+        "Subterranean Inquisition Chamber",
         "Rykard, Lord of Blasphemy"
       ],
       "is_optional": true,
@@ -139115,6 +139981,9 @@
     "variant": {
       "kind": "Location",
       "region": "limgrave",
+      "graces": [
+        "Warmaster's Shack"
+      ],
       "bosses": [
         "elemer-of-the-briar"
       ],
@@ -139897,7 +140766,24 @@
       "kind": "Location",
       "region": "limgrave",
       "graces": [
-        "18"
+        "Church of Pilgrimage",
+        "Castle Morne Rampart",
+        "Tombsward",
+        "South of the Lookout Tower",
+        "Ailing Village Outskirts",
+        "Beside the Crater-Pocked  Glade",
+        "Isolated Merchant's Shack",
+        "Fourth Church of Marika",
+        "Bridge of Sacrifice",
+        "Castle Morne Lift",
+        "Behind the Castle",
+        "Beside the Rampart Gaol",
+        "Morne Moangrave",
+        "Impaler's Catacombs",
+        "Tombsward Catacombs",
+        "Earthbore Cave",
+        "Tombsward Cave",
+        "Morne Tunnel"
       ],
       "npcs": [
         "castellan-edgar",
@@ -141598,6 +142484,9 @@
     "variant": {
       "kind": "Location",
       "region": "mt-gelmir",
+      "graces": [
+        "Wyndham Catacombs"
+      ],
       "bosses": [
         "erdtree-burial-watchdog"
       ],
@@ -141763,6 +142652,9 @@
     "variant": {
       "kind": "Location",
       "region": "consecrated-snowfield",
+      "graces": [
+        "Yelough Anix Tunnel"
+      ],
       "bosses": [
         "astel-stars-of-darkness"
       ],
@@ -142193,6 +143085,9 @@
     "variant": {
       "kind": "Location",
       "region": "mountaintops-of-the-giants",
+      "graces": [
+        "Zamor Ruins"
+      ],
       "npcs": [
         "shabriri"
       ],

@@ -377,6 +377,23 @@ def list_field(raw: str | None):
     parts = [p for p in parts if p]
     return parts or None
 
+def name_list_field(raw: str | None):
+    """list_field, minus entries that are bare counts (infobox 'graces = 5')."""
+    parts = [p for p in (list_field(raw) or []) if not p.strip().isdigit()]
+    return parts or None
+
+# Grace screenshots are uniformly named "ER Site of Grace <Name>.png" across
+# every page format the wiki uses (tabbers, {{grace}} bullet lists, galleries).
+GRACE_IMG = re.compile(r"ER Site of Grace ([^.|\]\n]+?)\s*\.(?:png|jpe?g)", re.I)
+
+def grace_names_from(text: str):
+    names = []
+    for n in GRACE_IMG.findall(text):
+        n = re.sub(r"\s+\d+$", "", n.strip())  # "Elden Throne 2" screenshot variants
+        if n and "{" not in n and n not in names:
+            names.append(n)
+    return names or None
+
 def body_to_text(raw: str) -> str:
     return clean_text(raw)
 
@@ -388,7 +405,7 @@ RES_KEYS = ["standard", "slash", "strike", "pierce", "magic", "fire", "lightning
             "holy", "poison", "rot", "bleed", "frost", "sleep", "madness", "death"]
 STAT_KEYS = ["str", "dex", "int", "fai", "arc", "vig", "mnd", "end"]
 
-def build_character(kv, sections, id_set, alias):
+def build_character(kv, sections, id_set, alias, wt=""):
     identity = prune({
         "title": clean_field(kv.get("title")),
         "aka": list_field(kv.get("aka")),
@@ -454,17 +471,24 @@ def build_character(kv, sections, id_set, alias):
         v["relations"] = relations
     return v
 
-def build_location(kv, sections, id_set, alias):
+def build_location(kv, sections, id_set, alias, wt=""):
     def sec_refs(*names):
         for s in sections:
             if s["heading"].lower() in names:
                 return sec_link_refs(s["raw"], id_set, alias)
         return None
+    def sec_raw(*names):
+        for s in sections:
+            if s["heading"].lower() in names:
+                return s["raw"]
+        return ""
     return prune({
         "kind": "Location",
         "region": (refs_from(kv["region"], id_set, alias) or [None])[0] if "region" in kv else None,
         "sub_regions": refs_from(kv.get("sub-regions", kv.get("sub_regions", "")), id_set, alias) or None,
-        "graces": list_field(kv.get("graces")) or sec_refs("sites of grace"),
+        "graces": name_list_field(kv.get("graces"))
+                  or grace_names_from(sec_raw("sites of grace", "site of grace"))
+                  or grace_names_from(wt),
         "is_legacy_dungeon": True if kv.get("legacy-dungeon") or kv.get("legacy_dungeon") else None,
         "is_optional": True if str(kv.get("optional", "")).strip().lower() in ("yes", "true", "1") else None,
         "map_fragment": clean_field(kv.get("map_fragment")),
@@ -479,7 +503,7 @@ def struct(kv, keys):
 def scale_struct(kv, keys):
     return prune({out: clean_field(kv.get(src)) for out, src in keys})
 
-def build_weapon(kv, sections, id_set, alias):
+def build_weapon(kv, sections, id_set, alias, wt=""):
     return prune({
         "kind": "Weapon",
         "weapon_class": clean_field(kv.get("type")),
@@ -501,7 +525,7 @@ def build_weapon(kv, sections, id_set, alias):
         "passive_effects": list_field(kv.get("effects")),
     })
 
-def build_armor(kv, sections, id_set, alias):
+def build_armor(kv, sections, id_set, alias, wt=""):
     return prune({
         "kind": "Armor",
         "slot": (clean_field(kv.get("type")) or "").capitalize() or None,
@@ -516,7 +540,7 @@ def build_armor(kv, sections, id_set, alias):
         "passive_effects": list_field(kv.get("effects")),
     })
 
-def build_item(kv, sections, id_set, alias):
+def build_item(kv, sections, id_set, alias, wt=""):
     # tiers for stackable/combined pages: rows like "* [1] ..." are hard to parse
     # reliably; capture a light tier table only if an obvious list is present.
     return prune({
@@ -583,7 +607,7 @@ def normalize(page: dict, id_set: set[str], alias: dict[str, str]) -> dict | Non
         "description": desc or None,
         "sections": sections_out or None,
         "found_at": list(dict.fromkeys(found_at)) or None,
-        "variant": None if kind == "Concept" else BUILDERS[kind](kv, secs, id_set, alias),
+        "variant": None if kind == "Concept" else BUILDERS[kind](kv, secs, id_set, alias, wt),
     }
     return prune(entity) | {"variant": entity["variant"]}  # keep variant even if None
 

@@ -317,28 +317,143 @@ main :: proc() {
 		}
 
 		variant: Variant
-		variant_ok := "found_at" in obj
+		variant_ok := "variant" in obj
 		if variant_ok {
-			obj_found_at_values, found_at_is_json_obj_ok := obj["found_at"].(json.Array)
-			if !found_at_is_json_obj_ok {
-				fmt.println("found_at is not an object. Assuming bad data.")
+			_, obj_variant_value_is_null := obj["variant"].(json.Null)
+			if obj_variant_value_is_null {
+				continue
+			}
+			obj_variant_values, obj_variant_values_is_json_obj_ok := obj["variant"].(json.Object)
+			if !obj_variant_values_is_json_obj_ok {
+				fmt.println("variant is not an object. Assuming bad data.")
 				os.exit(1)
 			}
 
-			for found_at_value in obj_found_at_values {
-				// fmt.println(found_at_value)
-				found_at_value, found_at_value_ok := found_at_value.(json.String)
-				if !found_at_value_ok {
-					fmt.println("found_at value is not a string. Assuming bad data")
-					os.exit(1)
+			variant_kind_value, variant_kind_ok := obj_variant_values["kind"]
+			if !variant_kind_ok {
+				fmt.println("variant_kind is not there. Assuming bad data.")
+				os.exit(1)
+			}
+
+			variant_kind, variant_kind_value_ok := variant_kind_value.(json.String)
+
+			// fmt.println(variant_kind)
+			switch variant_kind {
+			case "Armor":
+			// ArmorData :: struct {
+			// 	slot:            ArmorSlot,
+			// 	weight:          f32,
+			// 	defense:         DefenseType,
+			// 	resistance:      ResistanceType,
+			// 	has_altered:     bool,
+			// 	passive_effects: []string,
+			// }
+			case "Location":
+				// LocationData :: struct {
+				// 	region:            Ref,
+				// 	sub_regions:       []Ref,
+				// 	graces:            []string,
+				// 	is_legacy_dungeon: bool,
+				// 	is_optional:       bool,
+				// 	map_fragment:      string,
+				// 	bosses:            []Ref,
+				// 	npcs:              []Ref,
+				// 	notable_loot:      []Ref,
+				// }
+				// fmt.println(obj_variant_values["is_legacy_dungeon"])
+
+				region: Ref
+				region_is_ok := "region" in obj_variant_values
+				if region_is_ok {
+					region_value, region_value_ok := obj_variant_values["region"].(json.String)
+					if !region_value_ok {
+						fmt.println("region_value is not a string. Assuming bad data")
+					}
+
+					region = region_value
 				}
 
-				found_where: Ref
-				found_where = found_at_value
-				append(&found_at, found_where)
-				// fmt.println(found_at_value)
+				sub_regions: []Ref
+				sub_regions = unpack_ref_array(obj_variant_values, "sub_regions")
 
+				graces: [dynamic]string
+				graces = unpack_string_array(obj_variant_values, "graces")
+
+				is_legacy_dungeon, is_optional: bool
+				legacy_dung := "is_legacy_dungeon" in obj_variant_values
+				if legacy_dung {
+					is_legacy_dungeon = legacy_dung
+				}
+
+				dung_optional := "is_optional" in obj_variant_values
+				if dung_optional {
+					is_optional = dung_optional
+				}
+
+				map_fragment: string
+				frag_ok := "map_fragment" in obj_variant_values
+				if frag_ok {
+					obj_frag_value, obj_frag_value_ok := obj_variant_values["map_fragment"].(json.String)
+
+					if !obj_frag_value_ok {
+						fmt.println("Map fragment value is not a string. Assuming bad data")
+						os.exit(1)
+					}
+
+					map_fragment = obj_frag_value
+				}
+
+				bosses: []Ref
+				bosses = unpack_ref_array(obj_variant_values, "bosses")
+
+				npcs: []Ref
+				npcs = unpack_ref_array(obj_variant_values, "npcs")
+
+				notable_loot: [dynamic]Ref
+				notable_loot_exists := "notable_loot" in obj
+				if notable_loot_exists {
+					loot_array, loot_array_ok := obj_variant_values["loot"].(json.Array)
+					if !loot_array_ok {
+						fmt.println("loot_array is not an array. Assuming bad data")
+						os.exit(1)
+					}
+
+					for loot_value in loot_array {
+						loot_value, loot_is_string := loot_value.(json.String)
+						if !loot_is_string {
+							fmt.println("loot_value is not a string. Assuming bad value.")
+							os.exit(1)
+						}
+
+						loot: Ref
+						loot = loot_value
+						append(&notable_loot, loot)
+					}
+				}
+				test_notable_loot: []Ref
+				test_notable_loot = unpack_ref_array(obj_variant_values, "notable_loot")
+				fmt.println(test_notable_loot)
+
+				variant = LocationData {
+					region,
+					sub_regions[:],
+					graces[:],
+					is_legacy_dungeon,
+					is_optional,
+					map_fragment,
+					bosses[:],
+					npcs[:],
+					notable_loot[:],
+				}
+
+			case "Weapon":
+			case "Item":
+			case "Character":
 			}
+
+
+			// fmt.println(found_at_value)
+
 		}
 		// fmt.println(entities)
 		// eldr_entity := Entity {
