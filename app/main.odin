@@ -3,6 +3,7 @@ package main
 import "core:encoding/json"
 import "core:fmt"
 import "core:os"
+import "core:reflect"
 import "core:strings"
 import "core:unicode/utf8"
 
@@ -39,7 +40,7 @@ AttackType :: enum {
 
 ArmorSlot :: enum {
 	Head,
-	Body,
+	Chest,
 	Arms,
 	Legs,
 }
@@ -340,28 +341,70 @@ main :: proc() {
 			// fmt.println(variant_kind)
 			switch variant_kind {
 			case "Armor":
-			// ArmorData :: struct {
-			// 	slot:            ArmorSlot,
-			// 	weight:          f32,
-			// 	defense:         DefenseType,
-			// 	resistance:      ResistanceType,
-			// 	has_altered:     bool,
-			// 	passive_effects: []string,
+				// ArmorData :: struct {
+				// 	slot:            ArmorSlot,
+				// 	weight:          f32,
+				// 	defense:         DefenseType,
+				// 	resistance:      ResistanceType,
+				// 	has_altered:     bool,
+				// 	passive_effects: []string,
+				// }
+				slot: ArmorSlot
+				slot_exists := "slot" in obj_variant_values
+				if slot_exists {
+					slot_value, slot_value_is_string := obj_variant_values["slot"].(json.String)
+					if !slot_value_is_string {
+						fmt.println("slot_value is not a string. Assuming bad data. Fix it.")
+						os.exit(1)
+					}
+
+					e_slot, e_slot_ok := reflect.enum_from_name(ArmorSlot, slot_value)
+					if !e_slot_ok {
+						continue
+					}
+
+					slot = e_slot
+				}
+
+				weight: f32
+				weight_exists := "weight" in obj_variant_values
+				if weight_exists {
+					weight_value, weight_is_f64 := obj_variant_values["weight"].(json.Float)
+					if !weight_is_f64 {
+						fmt.println("weight_value is not f64. Fix it.")
+						os.exit(1)
+					}
+
+					weight = f32(weight_value)
+				}
+
+				defense: DefenseType
+				defense_exists := "defense" in obj_variant_values
+				if defense_exists {
+					defense_object, defense_is_object := unpack(
+						obj_variant_values["defense"],
+						json.Object,
+					)
+
+					for key, value in defense_object {
+						d_val, _ := unpack(defense_object[key], json.Float)
+
+						if key == defense.key {
+							defense.key = d_val
+						}
+					}
+					// defense.fire = defense_value["fire"]
+					fmt.println(defense_object)
+				}
+			// variant = ArmorData {
+			//    slot,
+			//    weight,
+			//    defense,
+			//    resistance,
+			//    has_altered,
+			//    passive_effects
 			// }
 			case "Location":
-				// LocationData :: struct {
-				// 	region:            Ref,
-				// 	sub_regions:       []Ref,
-				// 	graces:            []string,
-				// 	is_legacy_dungeon: bool,
-				// 	is_optional:       bool,
-				// 	map_fragment:      string,
-				// 	bosses:            []Ref,
-				// 	npcs:              []Ref,
-				// 	notable_loot:      []Ref,
-				// }
-				// fmt.println(obj_variant_values["is_legacy_dungeon"])
-
 				region: Ref
 				region_is_ok := "region" in obj_variant_values
 				if region_is_ok {
@@ -409,30 +452,8 @@ main :: proc() {
 				npcs: []Ref
 				npcs = unpack_ref_array(obj_variant_values, "npcs")
 
-				notable_loot: [dynamic]Ref
-				notable_loot_exists := "notable_loot" in obj
-				if notable_loot_exists {
-					loot_array, loot_array_ok := obj_variant_values["loot"].(json.Array)
-					if !loot_array_ok {
-						fmt.println("loot_array is not an array. Assuming bad data")
-						os.exit(1)
-					}
-
-					for loot_value in loot_array {
-						loot_value, loot_is_string := loot_value.(json.String)
-						if !loot_is_string {
-							fmt.println("loot_value is not a string. Assuming bad value.")
-							os.exit(1)
-						}
-
-						loot: Ref
-						loot = loot_value
-						append(&notable_loot, loot)
-					}
-				}
-				test_notable_loot: []Ref
-				test_notable_loot = unpack_ref_array(obj_variant_values, "notable_loot")
-				fmt.println(test_notable_loot)
+				notable_loot: []Ref
+				notable_loot = unpack_ref_array(obj_variant_values, "notable_loot")
 
 				variant = LocationData {
 					region,
