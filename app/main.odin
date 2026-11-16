@@ -26,9 +26,48 @@ SpoilerTier :: enum {
 }
 
 WeaponClass :: enum {
+	Axe,
+	Backhand_Blade,
+	Ballista,
+	Beast_Claw,
+	Bow,
+	Claw,
+	Colossal_Sword,
+	Colossal_Weapon,
+	Crossbow,
+	Curved_Greatsword,
+	Curved_Sword,
 	Dagger,
-	Straight_Sword,
+	Fist,
+	Flail,
+	Glintstone_Staff,
+	Great_Hammer,
+	Great_Katana,
+	Great_Spear,
+	Greataxe,
+	Greatbow,
+	Greatshield,
 	Greatsword,
+	Halberd,
+	Hammer,
+	Hand_to_Hand,
+	Heavy_Thrusting_Sword,
+	Katana,
+	Light_Bow,
+	Light_Greatsword,
+	Medium_Shield,
+	Perfume_Bottle,
+	Reaper,
+	Sacred_Seal,
+	Small_Shield,
+	Spear,
+	Straight_Sword,
+	Throwing_Blade,
+	Thrusting_Shield,
+	Thrusting_Sword,
+	Torch,
+	Twinblade,
+	Whip,
 }
 
 AttackType :: enum {
@@ -129,7 +168,7 @@ DefenseType :: struct {
 }
 
 ResistanceType :: struct {
-	vs_slash, strike, pierce, immunity, robustness, focus, vitality, poise: int,
+	slash, strike, pierce, immunity, robustness, focus, vitality, poise: int,
 }
 
 ArmorData :: struct {
@@ -216,11 +255,9 @@ Variant :: union {
 
 main :: proc() {
 	args := os.args
-
 	eldr_file := #load("../data/entities.json")
-	// fmt.println(len(eldr_file))
-
 	json_data, err := json.parse(eldr_file)
+
 	if err != .None {
 		fmt.eprintln("Failed to parse the json file.")
 		fmt.eprintln("Error:", err)
@@ -261,16 +298,13 @@ main :: proc() {
 
 
 			for obj_section in obj_sections {
-				// fmt.println(obj_section)
 				obj_section, obj_section_ok := obj_section.(json.Object)
 				if !obj_section_ok {
 					fmt.println("Section value is not a JSON object. Assuming bad data")
 					os.exit(1)
 				}
 
-
 				what_tier: SpoilerTier
-				// defer delete(what_tier)
 				switch tier_string := obj_section["tier"].(string); tier_string {
 				case "Lore":
 					what_tier = SpoilerTier.Lore
@@ -279,7 +313,7 @@ main :: proc() {
 				case "LateGame":
 					what_tier = SpoilerTier.LateGame
 				}
-				// tier: SpoilerTier
+
 				section := Section {
 					obj_section["heading"].(string),
 					what_tier,
@@ -291,7 +325,6 @@ main :: proc() {
 
 		}
 
-		// fmt.println(obj)
 		found_at: [dynamic]Ref
 		found_at_ok := "found_at" in obj
 		if found_at_ok {
@@ -302,8 +335,8 @@ main :: proc() {
 			}
 
 			for found_at_value in obj_found_at_values {
-				// fmt.println(found_at_value)
 				found_at_value, found_at_value_ok := found_at_value.(json.String)
+
 				if !found_at_value_ok {
 					fmt.println("found_at value is not a string. Assuming bad data")
 					os.exit(1)
@@ -312,8 +345,6 @@ main :: proc() {
 				found_where: Ref
 				found_where = found_at_value
 				append(&found_at, found_where)
-				// fmt.println(found_at_value)
-
 			}
 		}
 
@@ -324,6 +355,7 @@ main :: proc() {
 			if obj_variant_value_is_null {
 				continue
 			}
+
 			obj_variant_values, obj_variant_values_is_json_obj_ok := obj["variant"].(json.Object)
 			if !obj_variant_values_is_json_obj_ok {
 				fmt.println("variant is not an object. Assuming bad data.")
@@ -338,17 +370,8 @@ main :: proc() {
 
 			variant_kind, variant_kind_value_ok := variant_kind_value.(json.String)
 
-			// fmt.println(variant_kind)
 			switch variant_kind {
 			case "Armor":
-				// ArmorData :: struct {
-				// 	slot:            ArmorSlot,
-				// 	weight:          f32,
-				// 	defense:         DefenseType,
-				// 	resistance:      ResistanceType,
-				// 	has_altered:     bool,
-				// 	passive_effects: []string,
-				// }
 				slot: ArmorSlot
 				slot_exists := "slot" in obj_variant_values
 				if slot_exists {
@@ -389,21 +412,89 @@ main :: proc() {
 					for key, value in defense_object {
 						d_val, _ := unpack(defense_object[key], json.Float)
 
-						if key == defense.key {
-							defense.key = d_val
+						if key == "physical" {
+							defense.physical = f32(d_val)
+						}
+
+						if key == "magic" {
+							defense.magic = f32(d_val)
+						}
+
+						if key == "fire" {
+							defense.fire = f32(d_val)
+						}
+
+						if key == "lightning" {
+							defense.lightning = f32(d_val)
+						}
+
+						if key == "holy" {
+							defense.holy = f32(d_val)
 						}
 					}
-					// defense.fire = defense_value["fire"]
-					fmt.println(defense_object)
 				}
-			// variant = ArmorData {
-			//    slot,
-			//    weight,
-			//    defense,
-			//    resistance,
-			//    has_altered,
-			//    passive_effects
-			// }
+
+				resistance: ResistanceType
+				res_exists := "resistance" in obj_variant_values
+
+				if res_exists {
+					res_obj, _ := unpack(obj_variant_values["resistance"], json.Object)
+
+					for key, value in res_obj {
+						res_val, _ := unpack(res_obj[key], json.Float)
+
+						if key == "slash" {
+							resistance.slash = int(res_val)
+						}
+
+						if key == "strike" {
+							resistance.strike = int(res_val)
+						}
+
+						if key == "pierce" {
+							resistance.pierce = int(res_val)
+						}
+
+						if key == "immunity" {
+							resistance.immunity = int(res_val)
+						}
+
+						if key == "robustness" {
+							resistance.robustness = int(res_val)
+						}
+
+						if key == "focus" {
+							resistance.focus = int(res_val)
+						}
+
+						if key == "vitality" {
+							resistance.vitality = int(res_val)
+						}
+
+						if key == "poise" {
+							resistance.poise = int(res_val)
+						}
+					}
+				}
+
+				has_altered: bool
+				has_alt := "has_altered" in obj_variant_values
+				if has_alt {
+					has_altered = has_alt
+				}
+
+				passive_effects: [dynamic]string
+				passive_effects = unpack_string_array(obj_variant_values, "passive_effects")
+
+				variant = ArmorData {
+					slot,
+					weight,
+					defense,
+					resistance,
+					has_altered,
+					passive_effects[:],
+				}
+
 			case "Location":
 				region: Ref
 				region_is_ok := "region" in obj_variant_values
@@ -468,6 +559,32 @@ main :: proc() {
 				}
 
 			case "Weapon":
+				//       WeaponData :: struct {
+				// 	class:           WeaponClass,
+				// 	attack_type:     AttackType,
+				// 	weight:          f32,
+				// 	attack:          Attack,
+				// 	guard:           Guard,
+				// 	scaling:         Scaling,
+				// 	requirements:    Requirements,
+				// 	skill:           string,
+				// 	crit:            int,
+				// 	passive_effects: []string,
+				// }
+
+
+				class: WeaponClass
+				class_exists := "weapon_class" in obj_variant_values
+				if class_exists {
+					wep_val, _ := unpack(obj_variant_values["weapon_class"], string)
+					fmt.println(wep_val)
+					str_build := strings.builder_make()
+					defer strings.builder_destroy(&str_build)
+				}
+			// variant = WeaponData {
+			//     class, attack_type, weight, attack, guard, scaling, requirements, skill, crit, passive_effects[:]
+			//   }
+
 			case "Item":
 			case "Character":
 			}
@@ -496,13 +613,6 @@ main :: proc() {
 		defer delete(query)
 
 		answer := ""
-
-		// for result in results {
-		// 	if strings.equal_fold(query, result.name) {
-		// 		answer = result.description
-		// 	}
-		// }
-
 		if answer == "" {
 			recommendations: [dynamic]string
 			defer delete(recommendations)
@@ -530,6 +640,7 @@ main :: proc() {
 					strings.write_string(&str_build, "\n")
 					strings.write_string(&str_build, rec)
 				}
+
 				final := strings.to_string(str_build)
 				fmt.println(final)
 			} else {

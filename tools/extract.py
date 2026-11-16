@@ -503,10 +503,16 @@ def struct(kv, keys):
 def scale_struct(kv, keys):
     return prune({out: clean_field(kv.get(src)) for out, src in keys})
 
+def canon_class(raw):
+    """Weapon class with wiki casing slips fixed ('colossal weapon' -> 'Colossal Weapon').
+    Only all-lowercase values are touched, so 'Hand-to-Hand' keeps its casing."""
+    v = clean_field(raw)
+    return v.title() if v and v.islower() else v
+
 def build_weapon(kv, sections, id_set, alias, wt=""):
     return prune({
         "kind": "Weapon",
-        "weapon_class": clean_field(kv.get("type")),
+        "weapon_class": canon_class(kv.get("type")),
         "attack_type": clean_field(kv.get("attack_type")),
         "weight": coerce_number(kv.get("weight")),
         "attack": struct(kv, [("physical", "physical_power"), ("magic", "magic_power"),

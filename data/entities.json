@@ -40158,7 +40158,7 @@
     ],
     "variant": {
       "kind": "Weapon",
-      "weapon_class": "dagger",
+      "weapon_class": "Dagger",
       "attack_type": "slash/pierce",
       "attack": {
         "physical": 55,
@@ -106163,7 +106163,7 @@
     ],
     "variant": {
       "kind": "Weapon",
-      "weapon_class": "colossal weapon",
+      "weapon_class": "Colossal Weapon",
       "attack_type": "standard",
       "attack": {
         "physical": 100,
@@ -117702,7 +117702,7 @@
     ],
     "variant": {
       "kind": "Weapon",
-      "weapon_class": "thrusting sword",
+      "weapon_class": "Thrusting Sword",
       "attack_type": "standard/pierce",
       "attack": {
         "physical": 66,
@@ -136056,7 +136056,7 @@
     ],
     "variant": {
       "kind": "Weapon",
-      "weapon_class": "hammer",
+      "weapon_class": "Hammer",
       "attack_type": "strike",
       "attack": {
         "physical": 68,
