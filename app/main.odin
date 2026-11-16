@@ -133,7 +133,7 @@ Entity :: struct {
 }
 
 Attack :: struct {
-	physical, magic, fire, lightning, holy: f32,
+	physical, magic, fire, lightning, holy, critical: f32,
 }
 
 Guard :: struct {
@@ -322,7 +322,6 @@ main :: proc() {
 
 				append(&sections, section)
 			}
-
 		}
 
 		found_at: [dynamic]Ref
@@ -577,9 +576,120 @@ main :: proc() {
 				class_exists := "weapon_class" in obj_variant_values
 				if class_exists {
 					wep_val, _ := unpack(obj_variant_values["weapon_class"], string)
-					fmt.println(wep_val)
-					str_build := strings.builder_make()
-					defer strings.builder_destroy(&str_build)
+
+					e_wep_class, e_wep_class_ok := reflect.enum_from_name(WeaponClass, wep_val)
+					if !e_wep_class_ok {
+						continue
+					}
+
+					class = e_wep_class
+				}
+
+				attack_type: AttackType
+				attack_t_exists := "attack_type" in obj_variant_values
+				if attack_t_exists {
+					attack_t_val, _ := unpack(obj_variant_values["attack_type"], string)
+
+					e_attack_t, e_attack_t_ok := reflect.enum_from_name(AttackType, attack_t_val)
+					if !e_attack_t_ok {
+						continue
+					}
+
+					attack_type = e_attack_t
+				}
+
+				weight: f32
+				weight_exists := "weight" in obj_variant_values
+				if weight_exists {
+					weight_val, _ := unpack(obj_variant_values["weight"], json.Float)
+					weight = f32(weight_val)
+				}
+
+				attack: Attack
+				attack_exists := "attack" in obj_variant_values
+				if attack_exists {
+					attack_obj, _ := unpack(obj_variant_values["attack"], json.Object)
+
+					for key, value in attack_obj {
+						attack_val, _ := unpack(attack_obj[key], json.Float)
+
+						if key == "physical" {
+							attack.physical = f32(attack_val)
+						}
+
+						if key == "magic" {
+							attack.magic = f32(attack_val)
+						}
+
+						if key == "fire" {
+							attack.fire = f32(attack_val)
+						}
+
+						if key == "lightning" {
+							attack.lightning = f32(attack_val)
+						}
+
+						if key == "holy" {
+							attack.holy = f32(attack_val)
+						}
+
+						if key == "critical" {
+							attack.critical = f32(attack_val)
+						}
+					}
+				}
+
+				guard: Guard
+				guard_exists := "guard" in obj_variant_values
+				if guard_exists {
+					guard_obj, _ := unpack(obj_variant_values["guard"], json.Object)
+					for key, value in guard_obj {
+						guard_val, _ := unpack(guard_obj[key], json.Float)
+
+						if key == "physical" {
+							guard.physical_guarded = f32(guard_val)
+						}
+
+						if key == "magic" {
+							guard.magic_guarded = f32(guard_val)
+						}
+
+						if key == "fire" {
+							guard.fire_guarded = f32(guard_val)
+						}
+
+						if key == "lightning" {
+							guard.lightning_guarded = f32(guard_val)
+						}
+
+						if key == "holy" {
+							guard.holy_guarded = f32(guard_val)
+						}
+
+						if key == "boost" {
+							guard.guard_boost = f32(guard_val)
+						}
+					}
+				}
+
+				scaling: Scaling
+				scaling_exists := "scaling" in obj_variant_values
+
+				if scaling_exists {
+					scaling_obj, _ := unpack(obj_variant_values["scaling"], json.Object)
+					grade: Grade
+
+					for key, value in scaling_obj {
+						scaling_val, _ := unpack(scaling_obj[key], string)
+
+						if key == "str" {
+							scaling.str = scaling_val
+						}
+
+						if key == "dex" {
+							scaling.dex = scaling_val
+						}
+					}
 				}
 			// variant = WeaponData {
 			//     class, attack_type, weight, attack, guard, scaling, requirements, skill, crit, passive_effects[:]
