@@ -801,8 +801,61 @@ main :: proc() {
 					effect = eff_val
 				}
 
-				fp_cost: int
-				fp_exists := "fp_cost"
+				fp_cost, slots_used: int
+				fp_exists := "fp_cost" in obj_variant_values
+
+				if fp_exists {
+					fp_val, fp_ok := unpack(obj_variant_values["fp_cost"], json.Float)
+
+					if !fp_ok {
+						continue
+					}
+
+					fp_cost = int(fp_val)
+				}
+
+				slots_u_exists := "slots_used" in obj_variant_values
+
+				if slots_u_exists {
+					slots_u_val, slots_ok := unpack(obj_variant_values["slots_used"], json.Float)
+
+					if !slots_ok {
+						continue
+					}
+
+					slots_used = int(slots_u_val)
+				}
+
+				spell_reqs: Requirements
+				spell_r_exists := "spell_reqs" in obj_variant_values
+
+				if spell_r_exists {
+					spell_r_obj, _ := unpack(obj_variant_values["spell_reqs"], json.Object)
+
+					for key, value in spell_r_obj {
+						req_val, _ := unpack(value, json.Float)
+
+						if key == "str" {
+							spell_reqs.str = int(req_val)
+						}
+
+						if key == "dex" {
+							spell_reqs.dex = int(req_val)
+						}
+
+						if key == "int" {
+							spell_reqs.int_req = int(req_val)
+						}
+
+						if key == "fai" {
+							spell_reqs.fai = int(req_val)
+						}
+
+						if key == "arc" {
+							spell_reqs.arc = int(req_val)
+						}
+					}
+				}
 			// variant = ItemData {category, effect, fp_cost, slots_used, spell_reqs, weight, required_items, buy_price, sell_price, tiers}
 			case "Character":
 			}
