@@ -25,7 +25,7 @@ from __future__ import annotations
 import argparse, json, os, re, sys, time, unicodedata, urllib.parse, urllib.request
 
 API = "https://eldenring.fandom.com/api.php"
-UA = "elden-ring-cli-extractor/0.1 (learning project; contact bhaslag@gmail.com)"
+UA = "elden-ring-cli-extractor/0.1 (learning project)"
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, "cache", "raw_pages.json")
 ALIAS_CACHE = os.path.join(HERE, "cache", "aliases.json")
@@ -546,12 +546,35 @@ def build_armor(kv, sections, id_set, alias, wt=""):
         "passive_effects": list_field(kv.get("effects")),
     })
 
+ITEM_CATEGORY_CANON = {
+    # wiki variants (lowercased) -> canonical category
+    "key item": "Key Item",
+    "tool": "Tool",
+    "talisman": "Talisman",
+    "incantation": "Incantation",
+    "sorcery": "Sorcery",
+    "crafting material": "Crafting Material",
+    "material": "Crafting Material",
+    "bolstering material": "Bolstering Material",
+    "ash of war": "Ash of War",
+    "spirit ashes": "Spirit Ashes",
+    "ashes": "Spirit Ashes",
+    "ammo": "Ammo",
+    "ammunition": "Ammo",
+    "bolt": "Ammo",
+    "greatbolt": "Ammo",
+}
+
+def canon_category(raw):
+    v = clean_field(raw)
+    return ITEM_CATEGORY_CANON.get(v.lower(), v) if v else v
+
 def build_item(kv, sections, id_set, alias, wt=""):
     # tiers for stackable/combined pages: rows like "* [1] ..." are hard to parse
     # reliably; capture a light tier table only if an obvious list is present.
     return prune({
         "kind": "Item",
-        "category": clean_field(kv.get("type")),
+        "category": canon_category(kv.get("type")),
         "effect": clean_field(kv.get("item_effect")),
         "fp_cost": coerce_number(kv.get("fp_cost")),
         "slots_used": coerce_number(kv.get("slots_used")),

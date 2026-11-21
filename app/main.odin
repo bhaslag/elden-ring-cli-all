@@ -85,10 +85,16 @@ ArmorSlot :: enum {
 }
 
 ItemCategory :: enum {
+	Key_Item,
 	Tool,
 	Talisman,
-	Key_Item,
+	Incantation,
+	Sorcery,
+	Crafting_Material,
 	Bolstering_Material,
+	Ash_of_War,
+	Spirit_Ashes,
+	Ammo,
 }
 
 LocationData :: struct {
@@ -112,7 +118,6 @@ WeaponData :: struct {
 	scaling:         Scaling,
 	requirements:    Requirements,
 	skill:           string,
-	crit:            int,
 	passive_effects: []string,
 }
 
@@ -558,20 +563,6 @@ main :: proc() {
 				}
 
 			case "Weapon":
-				//       WeaponData :: struct {
-				// 	class:           WeaponClass,
-				// 	attack_type:     AttackType,
-				// 	weight:          f32,
-				// 	attack:          Attack,
-				// 	guard:           Guard,
-				// 	scaling:         Scaling,
-				// 	requirements:    Requirements,
-				// 	skill:           string,
-				// 	crit:            int,
-				// 	passive_effects: []string,
-				// }
-
-
 				class: WeaponClass
 				class_exists := "weapon_class" in obj_variant_values
 				if class_exists {
@@ -643,8 +634,9 @@ main :: proc() {
 				guard_exists := "guard" in obj_variant_values
 				if guard_exists {
 					guard_obj, _ := unpack(obj_variant_values["guard"], json.Object)
+
 					for key, value in guard_obj {
-						guard_val, _ := unpack(guard_obj[key], json.Float)
+						guard_val, _ := unpack(value, json.Float)
 
 						if key == "physical" {
 							guard.physical_guarded = f32(guard_val)
@@ -680,22 +672,138 @@ main :: proc() {
 					grade: Grade
 
 					for key, value in scaling_obj {
-						scaling_val, _ := unpack(scaling_obj[key], string)
+						scaling_val, _ := unpack(value, string)
+
+						if scaling_val == "-" {
+							grade = Grade.None
+						} else {
+							grade, grade_ok := reflect.enum_from_name(Grade, scaling_val)
+
+							if !grade_ok {
+								fmt.println(
+									"Something's wrong with the grade in scaling. Check it",
+								)
+							}
+						}
 
 						if key == "str" {
-							scaling.str = scaling_val
+							scaling.str = grade
 						}
 
 						if key == "dex" {
-							scaling.dex = scaling_val
+							scaling.dex = grade
+						}
+
+						if key == "int" {
+							scaling.int_scale = grade
+						}
+
+						if key == "fai" {
+							scaling.fai = grade
+						}
+
+						if key == "arc" {
+							scaling.arc = grade
 						}
 					}
 				}
-			// variant = WeaponData {
-			//     class, attack_type, weight, attack, guard, scaling, requirements, skill, crit, passive_effects[:]
-			//   }
+
+				requirements: Requirements
+				req_exists := "requirements" in obj_variant_values
+
+				if req_exists {
+					req_obj, _ := unpack(obj_variant_values["requirements"], json.Object)
+
+					for key, value in req_obj {
+						req_val, _ := unpack(value, json.Float)
+
+						if key == "str" {
+							requirements.str = int(req_val)
+						}
+
+						if key == "dex" {
+							requirements.dex = int(req_val)
+						}
+
+						if key == "int" {
+							requirements.int_req = int(req_val)
+						}
+
+						if key == "fai" {
+							requirements.fai = int(req_val)
+						}
+
+						if key == "arc" {
+							requirements.arc = int(req_val)
+						}
+					}
+				}
+
+				skill: string
+				skill_exists := "skill" in obj_variant_values
+
+				if skill_exists {
+					skill_val, _ := unpack(obj_variant_values["skill"], json.String)
+					skill = skill_val
+				}
+
+				passive_effects: [dynamic]string
+				passive_effects = unpack_string_array(obj_variant_values, "passive_effects")
+
+				variant = WeaponData {
+					class,
+					attack_type,
+					weight,
+					attack,
+					guard,
+					scaling,
+					requirements,
+					skill,
+					passive_effects[:],
+				}
 
 			case "Item":
+				// ItemData :: struct {
+				// 	category:              ItemCategory,
+				// 	effect:                string,
+				// 	fp_cost:               int,
+				// 	slots_used:            int,
+				// 	spell_reqs:            Requirements,
+				// 	weight:                f32,
+				// 	required_items:        []Ref,
+				// 	buy_price, sell_price: int,
+				// 	tiers:                 []Tier,
+				// }
+
+				category: ItemCategory
+				cat_exists := "category" in obj_variant_values
+				if cat_exists {
+					cat_val, _ := unpack(obj_variant_values["category"], string)
+
+					e_cat, e_cat_ok := reflect.enum_from_name(ItemCategory, cat_val)
+					if !e_cat_ok {
+						continue
+					}
+
+					category = e_cat
+				}
+
+				effect: string
+				effect_exists := "effect" in obj_variant_values
+
+				if effect_exists {
+					eff_val, eff_val_ok := unpack(obj_variant_values["effect"], json.String)
+
+					if !eff_val_ok {
+						continue
+					}
+
+					effect = eff_val
+				}
+
+				fp_cost: int
+				fp_exists := "fp_cost"
+			// variant = ItemData {category, effect, fp_cost, slots_used, spell_reqs, weight, required_items, buy_price, sell_price, tiers}
 			case "Character":
 			}
 

@@ -222,7 +222,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -2295,7 +2295,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Material",
+      "category": "Crafting Material",
       "effect": "Crafting",
       "sell_price": 10
     }
@@ -4856,7 +4856,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Standard arrow used with bows and light bows",
       "buy_price": 20
     }
@@ -4957,7 +4957,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "talisman",
+      "category": "Talisman",
       "effect": "Raises maximum equipment load",
       "weight": 1.5,
       "sell_price": 100
@@ -10383,7 +10383,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Greatbolt",
+      "category": "Ammo",
       "buy_price": 300
     }
   },
@@ -10736,7 +10736,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Ashes",
+      "category": "Spirit Ashes",
       "effect": "Summons spirit of Banished Knight Engvall",
       "fp_cost": 100
     }
@@ -13119,7 +13119,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -13943,7 +13943,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Bolt",
+      "category": "Ammo",
       "sell_price": 10
     }
   },
@@ -16383,7 +16383,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "bloodrose"
@@ -16422,7 +16422,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "bloodrose",
@@ -16452,7 +16452,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "bloodrose"
@@ -18724,7 +18724,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 40
     }
   },
@@ -18948,7 +18948,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones"
       ],
@@ -18986,7 +18986,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "flight-pinion"
@@ -19016,7 +19016,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Bolt",
+      "category": "Ammo",
       "effect": "Thick, whittled bone bolt, large as a spear",
       "required_items": [
         "hefty-beast-bone"
@@ -19041,7 +19041,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo"
+      "category": "Ammo"
     }
   },
   {
@@ -19159,7 +19159,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Thick, whittled animal bone arrow, large as a spear",
       "required_items": [
         "hefty-beast-bone"
@@ -19198,7 +19198,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Thick, whittled bone arrow with feather fletchings",
       "required_items": [
         "hefty-beast-bone",
@@ -21202,7 +21202,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Bolt",
+      "category": "Ammo",
       "buy_price": 200,
       "sell_price": 10
     }
@@ -27409,7 +27409,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow with frozen tip<!--",
       "required_items": [
         "thin-beast-bones",
@@ -27450,7 +27450,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched bone arrow with frozen tip",
       "required_items": [
         "thin-beast-bones",
@@ -27477,7 +27477,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone bolt with frozen tip",
       "required_items": [
         "thin-beast-bones",
@@ -32367,7 +32367,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Ashes",
+      "category": "Spirit Ashes",
       "effect": "Summons Curseblade Meera",
       "fp_cost": 91
     }
@@ -40485,7 +40485,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Arrow imbued with the spirits of small animals",
       "buy_price": 160
     }
@@ -44227,7 +44227,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 160,
       "sell_price": 10
     }
@@ -44287,7 +44287,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 800,
       "sell_price": 10
     }
@@ -47018,7 +47018,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Arrow with the tip set alight"
     }
   },
@@ -48545,7 +48545,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Arrow whittled from animal bones, its tip set alight before firing",
       "required_items": [
         "thin-beast-bones",
@@ -48585,7 +48585,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Arrow whittled from animal bones, its tip set alight before firing",
       "required_items": [
         "thin-beast-bones",
@@ -48611,7 +48611,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo"
+      "category": "Ammo"
     }
   },
   {
@@ -59759,7 +59759,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Carved arrow made in tandem with the Erdtree Bow",
       "buy_price": 120,
       "sell_price": 10
@@ -60079,7 +60079,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 500,
       "sell_price": 10
     }
@@ -61780,7 +61780,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 500,
       "sell_price": 10
     }
@@ -61877,7 +61877,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "sell_price": 10
     }
   },
@@ -66498,7 +66498,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow with gold tincture tip",
       "required_items": [
         "thin-beast-bones",
@@ -66539,7 +66539,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched bone arrow with gold tincture tip",
       "required_items": [
         "thin-beast-bones",
@@ -69110,7 +69110,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -69136,7 +69136,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -69162,7 +69162,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -71988,7 +71988,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "sell_price": 10
     }
   },
@@ -74217,7 +74217,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -74243,7 +74243,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -74269,7 +74269,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -79398,7 +79398,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 500,
       "sell_price": 10
     }
@@ -79675,7 +79675,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow charged with lightning",
       "required_items": [
         "thin-beast-bones",
@@ -79716,7 +79716,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched animal bone arrow charged with lightning",
       "required_items": [
         "thin-beast-bones",
@@ -83024,7 +83024,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow with glintstone tincture tip",
       "required_items": [
         "thin-beast-bones",
@@ -83065,7 +83065,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched bone arrow with glintstone tincture tip",
       "required_items": [
         "thin-beast-bones",
@@ -86036,7 +86036,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "tool",
+      "category": "Tool",
       "effect": "Briefly binds Margit, once imprisoned, to earth",
       "buy_price": 5000
     }
@@ -87864,7 +87864,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Ashes",
+      "category": "Spirit Ashes",
       "effect": "Summons two Messmer soldier spirits",
       "fp_cost": 72
     }
@@ -90161,7 +90161,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Removes the Flame of Frenzy"
     }
   },
@@ -95748,7 +95748,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95774,7 +95774,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95800,7 +95800,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95826,7 +95826,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95852,7 +95852,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95878,7 +95878,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95904,7 +95904,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95930,7 +95930,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95956,7 +95956,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -95987,7 +95987,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -97564,7 +97564,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "tool",
+      "category": "Tool",
       "effect": "Use to gain a multitude of runes",
       "sell_price": 12500
     }
@@ -100141,7 +100141,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Offer to Twin Maiden Husks for new item access"
     }
   },
@@ -101699,7 +101699,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "congealed-putrescence",
@@ -101739,7 +101739,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "congealed-putrescence",
@@ -101776,7 +101776,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo"
+      "category": "Ammo"
     }
   },
   {
@@ -102033,7 +102033,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow with venom-tipped head",
       "required_items": [
         "thin-beast-bones",
@@ -102073,7 +102073,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched bone arrow tipped with venom",
       "required_items": [
         "thin-beast-bones",
@@ -102104,7 +102104,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "poisonbloom"
@@ -103992,7 +103992,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "tool",
+      "category": "Tool",
       "effect": "Teleportation to Mohgwyn Palace"
     }
   },
@@ -104714,7 +104714,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo"
+      "category": "Ammo"
     }
   },
   {
@@ -105408,7 +105408,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Ammunition",
+      "category": "Ammo",
       "buy_price": 800
     }
   },
@@ -106283,7 +106283,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow tipped with Rainbow Stone fragments",
       "required_items": [
         "thin-beast-bones",
@@ -106324,7 +106324,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "ruin-fragment",
@@ -112872,7 +112872,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Animal bone arrow with rot-coated tip",
       "required_items": [
         "thin-beast-bones",
@@ -112913,7 +112913,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched bone arrow with rot-coated tip",
       "required_items": [
         "thin-beast-bones",
@@ -115014,7 +115014,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "tool",
+      "category": "Tool",
       "effect": "Grants the blessing of an equipped Great Rune upon use",
       "buy_price": 4000,
       "sell_price": 200
@@ -119202,7 +119202,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 120
     }
   },
@@ -120918,7 +120918,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "cracked-crystal"
@@ -120961,7 +120961,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "cracked-crystal",
@@ -122440,7 +122440,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "required_items": [
         "thin-beast-bones",
         "trina-s-lily"
@@ -122480,7 +122480,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Fletched animal bone arrow with waterlily tincture tip",
       "required_items": [
         "thin-beast-bones",
@@ -122507,7 +122507,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Bolt",
+      "category": "Ammo",
       "effect": "Animal bone bolt with waterlily tincture tip",
       "required_items": [
         "thin-beast-bones",
@@ -124594,7 +124594,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "key item"
+      "category": "Key Item"
     }
   },
   {
@@ -126712,7 +126712,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Arrow imbued with ghostflame, dealing magic damage and causing frost buildup",
       "sell_price": 10
     }
@@ -127096,7 +127096,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "buy_price": 60
     }
   },
@@ -129444,7 +129444,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "ammo",
+      "category": "Ammo",
       "effect": "Bone arrow fletched with stormhawk feathers",
       "required_items": [
         "thin-beast-bones",
@@ -132001,7 +132001,7 @@
     ],
     "variant": {
       "kind": "Item",
-      "category": "Key item",
+      "category": "Key Item",
       "effect": "Ashes of a hawk which heeds no summons"
     }
   },
